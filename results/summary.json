@@ -1,0 +1,20 @@
+[
+ {
+  "strategy": "A",
+  "scope": "paper",
+  "rerank_n": 24,
+  "tau": 0.265,
+  "n_questions": 65,
+  "Hit@5": 0.875,
+  "MRR": 0.512,
+  "answer_F1_extr_abs": 0.284,
+  "n_answer_F1": 21,
+  "boolean_accuracy": 0.333,
+  "n_boolean": 3,
+  "abstention_accuracy": 0.92,
+  "refusal_precision": 0.59,
+  "refusal_recall": 0.92,
+  "citation_rate_nonboolean": 1.0,
+  "invalid_citations_total": 0
+ }
+]
