@@ -1,0 +1,4 @@
+# Runtime deps for the pipeline; the QASPER download uses the stdlib only.
+chromadb>=1.0
+transformers>=4.51        # tokenizer only (exact token counts for chunking)
+huggingface_hub>=0.23     # optional GGUF / model downloads

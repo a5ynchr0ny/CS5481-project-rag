@@ -1,0 +1,25 @@
+# data — fetched or generated, never committed
+data/qasper-src/
+data/qasper/
+data/chunks/
+data/chroma/
+data/hf-cache/
+
+# models
+*.gguf
+models/
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# os / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# logs
+*.log
