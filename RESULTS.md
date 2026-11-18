@@ -137,13 +137,26 @@ sentence-level splitting), then rerank.
 Global paper-hit is 0.575 (A) / 0.500 (B) at depth 5 and 0.600 / 0.550 at depth 24
 with reranking. Roughly 40–45% of questions never see their own paper in the
 candidate list, so no re-ordering stage can help them — the remaining global misses
-are dominated by paper-misses (16 of 27 for A/global). Raising the rerank depth to
-100 is the direct test of this explanation (see below).
+are dominated by paper-misses (16 of 27 for A/global).
 
-| A / global, rerank depth | Hit@5 | paper-hit | Misses |
-|---|---:|---:|---:|
-| 24 | 0.325 | 0.600 | 27 |
-| 100 | see `results/results_A_global_rr100.json` | — | — |
+Quadrupling the rerank depth does **not** fix it:
+
+| A / global, rerank depth | Hit@5 | paper-hit | MRR | Misses (paper / rank) |
+|---|---:|---:|---:|---:|
+| 24 | 0.325 | 0.600 | 0.209 | 27 (16 / 8) |
+| 100 | 0.325 | 0.575 | 0.181 | 27 (17 / 7) |
+
+The gold paper simply is not in the bi-encoder's top-100 for ~42% of questions —
+widening the candidate pool only adds noise for the reranker. This rules out the
+intuitive "just retrieve deeper" fix.
+
+A likely cause is the QASPER question-collection protocol: questions were written by
+NLP practitioners who saw **only the title and abstract**, while the annotated
+evidence usually sits in the body (methods/results). The question therefore matches
+the paper's framing, not the passage that answers it. Paper-scoped retrieval — the
+"user is reading this paper" setting — bypasses exactly this mismatch, which is why
+it gains ~0.45 Hit@5 and why we treat it as the primary setting rather than a
+convenience.
 
 ## Miss taxonomy — where the 40 answerable questions fail
 
@@ -165,6 +178,7 @@ are dominated by paper-misses (16 of 27 for A/global). Raising the rerank depth 
 | B / paper + rerank | 13 | 0 | 4 | **7** | 2 |
 | A / global + rerank | 27 | **16** | 8 | 1 | 2 |
 | B / global + rerank | 28 | **18** | 7 | 1 | 2 |
+| A / global + rerank, depth 100 | 27 | **17** | 7 | 1 | 2 |
 
 This is the clearest finding in the study: **the two chunkers fail in different
 ways.** Structured chunks fail by *ranking* (the evidence is inside the paper's
