@@ -4,6 +4,11 @@ Frozen from the 65-question stratified evaluation (`data/eval_set.json`,
 seed = 42). Everything below is reproducible with the commands in
 [README.md](README.md); per-question records are in `results/`.
 
+> `results/summary.json` holds the **last** `evaluate.py` run (the rerank
+> configuration). The four baseline configurations are stored per-question in
+> `results/results_{A,B}_{paper,global}.json`; their aggregates are the main table
+> below.
+
 ## Setup
 
 | | |
