@@ -1,0 +1,2899 @@
+[
+ {
+  "question_id": "2dbf6fe095cd879a9bf40f110b7b72c8bdde9475",
+  "paper_id": "1709.10367",
+  "question": "What hierarchical modelling approach is used?",
+  "qtype": "extractive",
+  "gold_answer": "the group-specific embedding representations are tied through a global embedding",
+  "evidence": [
+   "We propose two methods to share statistical strength among the embedding vectors. The first approach is based on hierarchical modeling BIBREF13 , which assumes that the group-specific embedding representations are tied through a global embedding. The second approach is based on amortization BIBREF14 , BIBREF15 , which considers that the individual embeddings are the output of a deterministic function of a global embedding representation. We use stochastic optimization to fit large data sets."
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:1909.13714:3",
+    "score": 0.9274
+   },
+   {
+    "chunk_id": "B:1912.10011:12",
+    "score": 0.8912
+   },
+   {
+    "chunk_id": "B:1912.10011:3",
+    "score": 0.8837
+   },
+   {
+    "chunk_id": "B:1709.10367:1",
+    "score": 0.8676
+   },
+   {
+    "chunk_id": "B:1905.10851:2",
+    "score": 0.7307
+   }
+  ],
+  "top_score": 0.927413821220398,
+  "hit5": true,
+  "mrr": 0.25,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "c1c44fd96c3fa6e16949ae8fa453e511c6435c68",
+  "paper_id": "1902.09243",
+  "question": "Why masking words in the decoder is helpful?",
+  "qtype": "extractive",
+  "gold_answer": "ecause this process is similar to the cloze task in BERT's pre-train process, therefore by using the ability of the contextual language model the decoder can generate more fluent and natural sequences.",
+  "evidence": [
+   "We design the word-level refine decoder because this process is similar to the cloze task in BERT's pre-train process, therefore by using the ability of the contextual language model the decoder can generate more fluent and natural sequences."
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:1902.09243:6",
+    "score": 0.9425
+   },
+   {
+    "chunk_id": "B:1706.08198:1",
+    "score": 0.7777
+   },
+   {
+    "chunk_id": "B:2004.01853:6",
+    "score": 0.7762
+   },
+   {
+    "chunk_id": "B:2004.01853:7",
+    "score": 0.5968
+   },
+   {
+    "chunk_id": "B:1805.07133:3",
+    "score": 0.363
+   }
+  ],
+  "top_score": 0.942464292049408,
+  "hit5": true,
+  "mrr": 1.0,
+  "refused": false,
+  "answer": "The refine decoder masks each word in the summary draft one by one and feeds the draft to BERT to generate context vectors [1]. This refine decoding process provides a more complete input sequence which is consistent with BERT's pre-training processes [1]. The word-level refine decoder is designed because this process is similar to the cloze task in BERT's pre-training process, so by using the ability of the contextual language model the decoder can generate more fluent and natural sequences [1].",
+  "validation": {
+   "citations": [
+    1
+   ],
+   "valid_citations": [
+    1
+   ],
+   "n_invalid": 0,
+   "has_citations": true
+  }
+ },
+ {
+  "question_id": "c77359fb9d3ef96965a9af0396b101f82a0a9de6",
+  "paper_id": "1909.00105",
+  "question": "How did they obtain the interactions?",
+  "qtype": "extractive",
+  "gold_answer": "from Food.com",
+  "evidence": [
+   "We collect a novel dataset of 230K+ recipe texts and 1M+ user interactions (reviews) over 18 years (2000-2018) from Food.com. Here, we restrict to recipes with at least 3 steps, and at least 4 and no more than 20 ingredients. We discard users with fewer than 4 reviews, giving 180K+ recipes and 700K+ reviews, with splits as in tab:recipeixnstats."
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:1705.05437:2",
+    "score": 0.8588
+   },
+   {
+    "chunk_id": "B:1705.05437:3",
+    "score": 0.8078
+   },
+   {
+    "chunk_id": "B:1806.04330:3",
+    "score": 0.6783
+   },
+   {
+    "chunk_id": "B:1912.08904:1",
+    "score": 0.3782
+   },
+   {
+    "chunk_id": "B:1806.04330:2",
+    "score": 0.3445
+   }
+  ],
+  "top_score": 0.858761727809906,
+  "hit5": false,
+  "mrr": 0.0,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "a8f51b4e334a917702422782329d97304a2fe139",
+  "paper_id": "1712.05999",
+  "question": "What is the threshold for determining that a tweet has gone viral?",
+  "qtype": "extractive",
+  "gold_answer": "1000",
+  "evidence": [
+   "One straightforward way of sharing information on Twitter is by using the retweet functionality, which enables a user to share a exact copy of a tweet with his followers. Among the reasons for retweeting, Body et al. BIBREF15 reported the will to: 1) spread tweets to a new audience, 2) to show one’s role as a listener, and 3) to agree with someone or validate the thoughts of others. As indicated, our initial interest is to characterize tweets containing fake news that went viral (as they are the most harmful ones, as they reach a wider audience), and understand how it differs from other viral tweets (that do not contain fake news). For our study, we consider that a tweet went viral if it was retweeted more than 1000 times."
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:1712.05999:4",
+    "score": 0.997
+   },
+   {
+    "chunk_id": "B:1712.05999:3",
+    "score": 0.9246
+   },
+   {
+    "chunk_id": "B:1712.05999:1",
+    "score": 0.9121
+   },
+   {
+    "chunk_id": "B:1712.05999:9",
+    "score": 0.9017
+   },
+   {
+    "chunk_id": "B:1712.05999:7",
+    "score": 0.827
+   }
+  ],
+  "top_score": 0.997007429599762,
+  "hit5": true,
+  "mrr": 0.5,
+  "refused": false,
+  "answer": "A tweet is considered to have gone viral if it was retweeted more than 1000 times [1][2].",
+  "validation": {
+   "citations": [
+    1,
+    2
+   ],
+   "valid_citations": [
+    1,
+    2
+   ],
+   "n_invalid": 0,
+   "has_citations": true
+  }
+ },
+ {
+  "question_id": "021bfb7e180d67112b74f05ecb3fa13acc036c86",
+  "paper_id": "1703.07476",
+  "question": "How is the vocabulary of word-like or phoneme-like units automatically discovered?",
+  "qtype": "extractive",
+  "gold_answer": "Zero Resource Toolkit (ZRTools) BIBREF7",
+  "evidence": [
+   "UTD aims to automatically identify and cluster repeated terms (e.g. words or phrases) from speech. To circumvent the exhaustive DTW-based search limited by INLINEFORM0 time BIBREF6 , we exploit the scalable UTD framework in the Zero Resource Toolkit (ZRTools) BIBREF7 , which permits search in INLINEFORM1 time. We briefly describe the UTD procedures in ZRTools by four steps below, and full details can be found in BIBREF7 ."
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:1702.03856:1",
+    "score": 0.9884
+   },
+   {
+    "chunk_id": "B:1703.07476:3",
+    "score": 0.9857
+   },
+   {
+    "chunk_id": "B:1703.07476:1",
+    "score": 0.9856
+   },
+   {
+    "chunk_id": "B:1703.07476:2",
+    "score": 0.9823
+   },
+   {
+    "chunk_id": "B:1703.07476:10",
+    "score": 0.9458
+   }
+  ],
+  "top_score": 0.9883967041969299,
+  "hit5": false,
+  "mrr": 0.0,
+  "refused": false,
+  "answer": "The Zero Resource Toolkit (ZRTools) uses dynamic time warping (DTW) to discover pairs of acoustically similar audio segments, and then uses graph clustering on overlapping pairs to form a hard clustering of the discovered segments [1]. In ZRTools, sparse approximate acoustic similarity matrices are constructed between pairs of speech utterances, word repetitions are identified via fast diagonal line search and segmental DTW, and the resulting matches are used to construct an acoustic similarity graph whose connected components form clusters of acoustic segments, each producing a corresponding term category [4]. A separate logistic regression model can rescore the similarity between identified matches by determining how likely a matching pair is the same underlying word/phrase and is not a filled pause [4]. For phoneme-like units, the nonparametric Bayesian acoustic unit discovery (AUD) framework formulates a phone-loop model where each phoneme-like unit is modeled as an HMM with a Gaussian mixture model of output densities (GMM-HMM) [4]. Under the Dirichlet process framework, the phone loop is considered an infinite mixture of GMM-HMMs with mixture weights based on the stick-breaking construction, and the infinite number of units is truncated in practice, giving zero mixture weight to any unit beyond some large count [2]. Training is fully unsupervised and parallelized, and after a fixed number of training iterations, Viterbi decoding is used to obtain acoustic unit tokenizations of the data [2].",
+  "validation": {
+   "citations": [
+    1,
+    2,
+    4
+   ],
+   "valid_citations": [
+    1,
+    2,
+    4
+   ],
+   "n_invalid": 0,
+   "has_citations": true
+  }
+ },
+ {
+  "question_id": "78292bc57ee68fdb93ed45430d80acca25a9e916",
+  "paper_id": "1911.03343",
+  "question": "How did they extend LAMA evaluation framework to focus on negation?",
+  "qtype": "extractive",
+  "gold_answer": "To this end, we introduce the negated LAMA dataset. We construct it by simply inserting negation elements (e.g., “not”) in LAMA cloze statement",
+  "evidence": [
+   "This work analyzes the understanding of pretrained language models of factual and commonsense knowledge stored in negated statements. To this end, we introduce the negated LAMA dataset. We construct it by simply inserting negation elements (e.g., “not”) in LAMA cloze statement (e.g., “The theory of relativity was not developed by [MASK].”). In our experiments, we query the pretrained language models with both original LAMA and negated LAMA statements and compare their predictions in terms of rank correlation and overlap of top predictions. We find that the predicted filler words often have high overlap. Thus, negating a cloze statement does not change the predictions in many cases – but of course it should as our example “birds can fly” vs. “birds cannot fly” shows. We identify and analyze a subset of cloze statements where predictions are different. We find that BERT handles negation best among pretrained language models, but it still fails badly on most negated statements."
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:1911.03343:1",
+    "score": 0.9993
+   },
+   {
+    "chunk_id": "B:1911.03343:0",
+    "score": 0.9957
+   },
+   {
+    "chunk_id": "B:1911.03343:2",
+    "score": 0.9943
+   },
+   {
+    "chunk_id": "B:1911.03343:3",
+    "score": 0.9862
+   },
+   {
+    "chunk_id": "B:2003.03014:21",
+    "score": 0.8775
+   }
+  ],
+  "top_score": 0.9992751479148865,
+  "hit5": true,
+  "mrr": 0.5,
+  "refused": false,
+  "answer": "They created negated versions of Google-RE, T-REx and SQuAD by manually inserting a negation element in each template or statement [1]. They did the same for a subset of ConceptNet that is easy to negate, selected by filtering for sentence length and extracting common queries [1]. They introduced the negated LAMA dataset, constructed by simply inserting negation elements (e.g., \"not\") in LAMA cloze statements (e.g., \"The theory of relativity was not developed by [MASK].\") [2]. In their experiments, they queried the pretrained language models with both original LAMA and negated LAMA statements and compared their predictions in terms of rank correlation and overlap of top predictions [2].",
+  "validation": {
+   "citations": [
+    1,
+    2
+   ],
+   "valid_citations": [
+    1,
+    2
+   ],
+   "n_invalid": 0,
+   "has_citations": true
+  }
+ },
+ {
+  "question_id": "d087539e6a38c42f0a521ff2173ef42c0733878e",
+  "paper_id": "1909.11687",
+  "question": "Why are prior knowledge distillation techniques models are ineffective in producing student models with vocabularies different from the original teacher models?  ",
+  "qtype": "extractive",
+  "gold_answer": "While there has been existing work on reducing NLP model vocabulary sizes BIBREF15, distillation techniques cannot utilize these, since they require the student and teacher models to share the same vocabulary and output space. This profoundly limits their potential to further reduce model sizes.",
+  "evidence": [
+   "However, a significant bottleneck that has been overlooked by previous efforts is the input vocabulary size and its corresponding word embedding matrix, often accounting for a significant proportion of all model parameters. For instance, the embedding table of the BERTBASE model, comprising over 30K WordPiece tokens BIBREF14, accounts for over $21\\%$ of the model size. While there has been existing work on reducing NLP model vocabulary sizes BIBREF15, distillation techniques cannot utilize these, since they require the student and teacher models to share the same vocabulary and output space. This profoundly limits their potential to further reduce model sizes."
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:1909.11687:2",
+    "score": 0.9993
+   },
+   {
+    "chunk_id": "B:1909.11687:3",
+    "score": 0.9993
+   },
+   {
+    "chunk_id": "B:1909.11687:4",
+    "score": 0.9979
+   },
+   {
+    "chunk_id": "B:1909.11687:9",
+    "score": 0.9968
+   },
+   {
+    "chunk_id": "B:1909.11687:7",
+    "score": 0.9966
+   }
+  ],
+  "top_score": 0.99934321641922,
+  "hit5": false,
+  "mrr": 0.0,
+  "refused": false,
+  "answer": "Prior approaches are not immediately applicable to this setting because of incompatible teacher and student model vocabularies [1]. Since the student vocabulary is not a complete subset of the teacher vocabulary, the two vocabularies may tokenize the same words differently, so the outputs of the teacher and student model for the masked language modeling task may not align [2]. Even with the high overlap between the two vocabularies, the need to train the student embedding from scratch and the change in embedding dimension precludes existing knowledge distillation techniques, which rely on the alignment of both models' output spaces [2].",
+  "validation": {
+   "citations": [
+    1,
+    2
+   ],
+   "valid_citations": [
+    1,
+    2
+   ],
+   "n_invalid": 0,
+   "has_citations": true
+  }
+ },
+ {
+  "question_id": "ed67359889cf61fa11ee291d6c378cccf83d599d",
+  "paper_id": "1707.06806",
+  "question": "Which pretrained word vectors did they use?",
+  "qtype": "extractive",
+  "gold_answer": " pre-trained GloVe word vectors ",
+  "evidence": [
+   "Since the input of our method is textual data, we follow the approach of BIBREF15 and map the text into a fixed-size vector representation. To this end, we use word embeddings that were successfully applied in other domains. We follow BIBREF5 and use pre-trained GloVe word vectors BIBREF16 to initialize the embedding layer (also known as look-up table). Section SECREF18 discusses the embedding layer in more details."
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:2004.03354:2",
+    "score": 0.9952
+   },
+   {
+    "chunk_id": "B:1806.04330:11",
+    "score": 0.995
+   },
+   {
+    "chunk_id": "B:1910.12574:3",
+    "score": 0.9875
+   },
+   {
+    "chunk_id": "B:1810.12085:6",
+    "score": 0.9789
+   },
+   {
+    "chunk_id": "B:1809.02279:6",
+    "score": 0.977
+   }
+  ],
+  "top_score": 0.9951730966567993,
+  "hit5": false,
+  "mrr": 0.0,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "493e971ee3f57a821ef1f67ef3cd47ade154e7c4",
+  "paper_id": "1803.09123",
+  "question": "What word embeddings do they test?",
+  "qtype": "extractive",
+  "gold_answer": "Bernoulli embeddings (b-emb) BIBREF1 , continuous bag-of-words (CBOW) BIBREF5 , Distributed Memory version of Paragraph Vector (PV-DM) BIBREF11 and the Global Vectors (GloVe) BIBREF6 model",
+  "evidence": [
+   "We present a comparison of the proposed models to existing word embeddings approaches. These are: the Bernoulli embeddings (b-emb) BIBREF1 , continuous bag-of-words (CBOW) BIBREF5 , Distributed Memory version of Paragraph Vector (PV-DM) BIBREF11 and the Global Vectors (GloVe) BIBREF6 model."
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:1909.00512:14",
+    "score": 0.9951
+   },
+   {
+    "chunk_id": "B:1807.07279:13",
+    "score": 0.9948
+   },
+   {
+    "chunk_id": "B:1911.10049:1",
+    "score": 0.9888
+   },
+   {
+    "chunk_id": "B:2001.01269:8",
+    "score": 0.9808
+   },
+   {
+    "chunk_id": "B:1911.10049:0",
+    "score": 0.9671
+   }
+  ],
+  "top_score": 0.995130717754364,
+  "hit5": false,
+  "mrr": 0.0,
+  "refused": false,
+  "answer": "The passages mention word2vec, GloVe, FastText, ELMo, BERT, and GPT-2 as embedding models [1][3][5]. The static embeddings created using ELMo and BERT's contextualized representations are compared against GloVe and FastText vectors [1]. ELMo has been shown to outperform previous word embeddings like word2vec and GloVe on many NLP tasks [5].",
+  "validation": {
+   "citations": [
+    1,
+    3,
+    5
+   ],
+   "valid_citations": [
+    1,
+    3,
+    5
+   ],
+   "n_invalid": 0,
+   "has_citations": true
+  }
+ },
+ {
+  "question_id": "662870a90890c620a964720b2ca122a1139410ea",
+  "paper_id": "1608.01884",
+  "question": "What language do they explore?",
+  "qtype": "extractive",
+  "gold_answer": "English, French, German ",
+  "evidence": [
+   "The third person plural pronoun `they' has no gender in English and most other languages (unlike the third person singular pronouns `he', `she', and `it'). However Romance languages such as French, Italian, and Spanish, and Semitic languages such as Hebrew and Arabic distinguish between the masculine and the feminine third-person plural pronouns, at least in some grammatical cases. For instance in French, the masculine pronoun is `ils'; the feminine pronoun is `elles'. In all of these cases, the masculine pronoun is standardly used for groups of mixed or unknown gender.",
+   "If these sentences are translated into French, then `they' in the first sentence should be translated `elles', as referring to Jane and Susan, and `they' in the second sentence should be translated `ils', as referring to Fred and George.",
+   "A couple of examples: The word `sie' in German serves as both the formal second person prounoun (always capitalized), the third person feminine singular, and the third person plural. Therefore, it can be translated into English as either “you”, “she”, “it”, or “they”; and into French as either `vous', `il', `elle', `ils', or `elles'. (The feminine third-person singular German `sie' can be translated as neuter in English and as masculine in French because the three languages do not slice up the worlds into genders in the same way.) Likewise, the possessive pronoun `ihr' in all its declensions can mean either `her' or `their'. In some cases, the disambiguation can be carried out on purely syntactic ground; e.g. if `sie' is the subject of a third-person singular verb, it must mean `she'. However, in many case, the disambiguation requires a deeper level of understanding. Thus, it should be possible to construct German Winograd schemas based on the words `sie' or `ihr' that have to be solved in order to translate them into English. For example,"
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:2004.02192:15",
+    "score": 0.5833
+   },
+   {
+    "chunk_id": "B:1912.01772:0",
+    "score": 0.0669
+   },
+   {
+    "chunk_id": "B:1903.11283:2",
+    "score": 0.0567
+   },
+   {
+    "chunk_id": "B:1911.07555:5",
+    "score": 0.0409
+   },
+   {
+    "chunk_id": "B:1804.11346:4",
+    "score": 0.0407
+   }
+  ],
+  "top_score": 0.5833461284637451,
+  "hit5": false,
+  "mrr": 0.0,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "b9d07757e2d2c4be41823dd1ea3b9c7f115b5f72",
+  "paper_id": "1808.03738",
+  "question": "Where does the ancient Chinese dataset come from?",
+  "qtype": "extractive",
+  "gold_answer": "ancient Chinese history records in several dynasties (about 1000BC-200BC) and articles written by celebrities of that era",
+  "evidence": [
+   "Data Collection. To build the large ancient-modern Chinese dataset, we collected 1.7K bilingual ancient-modern Chinese articles from the internet. More specifically, a large part of the ancient Chinese data we used come from ancient Chinese history records in several dynasties (about 1000BC-200BC) and articles written by celebrities of that era. They used plain and accurate words to express what happened at that time, and thus ensure the generality of the translated materials."
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:1808.03738:3",
+    "score": 0.997
+   },
+   {
+    "chunk_id": "B:1808.03738:0",
+    "score": 0.995
+   },
+   {
+    "chunk_id": "B:1808.03738:1",
+    "score": 0.9941
+   },
+   {
+    "chunk_id": "B:1808.03738:2",
+    "score": 0.991
+   },
+   {
+    "chunk_id": "B:1808.03738:10",
+    "score": 0.9828
+   }
+  ],
+  "top_score": 0.9970473647117615,
+  "hit5": true,
+  "mrr": 1.0,
+  "refused": false,
+  "answer": "The ancient Chinese data largely come from ancient Chinese history records in several dynasties (about 1000BC–200BC) and articles written by celebrities of that era [1]. The bilingual ancient-modern Chinese articles were collected from the internet, totaling 1.7K articles [1].",
+  "validation": {
+   "citations": [
+    1
+   ],
+   "valid_citations": [
+    1
+   ],
+   "n_invalid": 0,
+   "has_citations": true
+  }
+ },
+ {
+  "question_id": "1269c5d8f61e821ee0029080c5ba2500421d5fa6",
+  "paper_id": "1805.07133",
+  "question": "what methods were used to reduce data sparsity effects?",
+  "qtype": "extractive",
+  "gold_answer": "Back Translation, Mix-Source Approach",
+  "evidence": [
+   "In this section, we describe the data augmentation methods we use to increase the amount of training data in order to make our NMT systems suffer less from the low-resourced situation in Japanese INLINEFORM0 Vietnamese translation. Although NMT systems can predict and generate the translation of unseen words on their vocabularies, but they only perform this well if the parallel corpus for training are sufficiently large. For many under-resourced languages, unfortunately, it hardly presents. In reality, although the monolingual data of Vietnamese and Japanese are immensely available due to the popularity of their speakers, the bilingual Japanese-Vietnamese corpora are very limited and often in low quality or in narrowly technical domains. Therefore, data augmentation methods to exploit monolingual data for NMT systems are necessary to obtain more bilingual data, thus upgrading the translating quality.",
+   "Back Translation",
+   "One of the approaches to leverage the monolingual data is to use a machine translation system to translate those data in order to create a synthetic parallel data. Normally, the monolingual data in the target language is translated, thus the name of the method: Back Translation BIBREF11 .",
+   "Mix-Source Approach",
+   "Another data augmentation method considered useful in this low-resourced setting is the mix-source method BIBREF12 . In this method, we can utilize the monolingual data of the target language in a multilingual NMT system by mixing the original source sentences with those target monolingual data. The multilingual framework then uses the share information across source and target languages to improve the decision of the target words to be chosen."
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:1909.09551:11",
+    "score": 0.9198
+   },
+   {
+    "chunk_id": "B:1702.03342:4",
+    "score": 0.8823
+   },
+   {
+    "chunk_id": "B:1909.09551:12",
+    "score": 0.8798
+   },
+   {
+    "chunk_id": "B:1609.00559:0",
+    "score": 0.8726
+   },
+   {
+    "chunk_id": "B:1811.05711:7",
+    "score": 0.2548
+   }
+  ],
+  "top_score": 0.9197966456413269,
+  "hit5": false,
+  "mrr": 0.0,
+  "refused": false,
+  "answer": "Concept embeddings for BOC densification were learned to overcome the inherent data sparsity problem associated with the BOC representation [2]. Second-order co-occurrence vectors were proposed as a possible solution because distributional methods do not perform well when data is very sparse [4]. Recommendation systems based on LDA with ratings data can provide dimensionality reduction that helps alleviate the sparseness problem inherent to many traditional collaborative-filtering systems [1][3].",
+  "validation": {
+   "citations": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "valid_citations": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_invalid": 0,
+   "has_citations": true
+  }
+ },
+ {
+  "question_id": "5a6926de13a8cc25ce687c22741ba97a6e63d4ee",
+  "paper_id": "1706.01875",
+  "question": "What other political events are included in the database?",
+  "qtype": "extractive",
+  "gold_answer": "US presidential primaries, Democratic and Republican National Conventions",
+  "evidence": [
+   "Offensiveness over time. We find that on average 8.4% of all political comments are offensive compared to 7.8% of all apolitical comments. fig:offensive-speech-timeline illustrates the fraction of offensive political and apolitical comments made during each week in our study. We see that while the fraction of apolitical offensive comments has stayed steady, there has been an increase in the fraction of offensive political comments starting in July 2016. Notably, this increase is observed after the conclusion of the US presidential primaries and during the period of the Democratic and Republican National Conventions and does not reduce even after the conclusion of the US presidential elections held on November 8. Participants in political subreddits were 2.6% more likely to observe offensive comments prior to July 2016 but 14.9% more likely to observe offensive comments from July 2016 onwards."
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:1908.09246:9",
+    "score": 0.5073
+   },
+   {
+    "chunk_id": "B:2003.08385:10",
+    "score": 0.431
+   },
+   {
+    "chunk_id": "B:1909.10012:4",
+    "score": 0.3435
+   },
+   {
+    "chunk_id": "B:1909.10012:3",
+    "score": 0.2795
+   },
+   {
+    "chunk_id": "B:1802.00396:8",
+    "score": 0.2344
+   }
+  ],
+  "top_score": 0.5072817802429199,
+  "hit5": false,
+  "mrr": 0.0,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "df95b3cb6aa0187655fd4856ae2b1f503d533583",
+  "paper_id": "1805.03710",
+  "question": "What types of subwords do they incorporate in their model?",
+  "qtype": "extractive",
+  "gold_answer": "n-gram subwords, unsupervised morphemes identified using Morfessor BIBREF11 to learn whether more linguistically motivated subwords ",
+  "evidence": [
+   "We compare 1) the use of n-gram subwords, like fastText, and 2) unsupervised morphemes identified using Morfessor BIBREF11 to learn whether more linguistically motivated subwords offer any advantage over simple n-grams."
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:1805.03710:3",
+    "score": 0.9994
+   },
+   {
+    "chunk_id": "B:1805.03710:1",
+    "score": 0.999
+   },
+   {
+    "chunk_id": "B:1805.03710:0",
+    "score": 0.997
+   },
+   {
+    "chunk_id": "B:1805.03710:6",
+    "score": 0.9942
+   },
+   {
+    "chunk_id": "B:2003.11562:3",
+    "score": 0.9868
+   }
+  ],
+  "top_score": 0.99935382604599,
+  "hit5": true,
+  "mrr": 0.3333333333333333,
+  "refused": false,
+  "answer": "They compare two types of subwords: simple n-grams (like fastText) and unsupervised morphemes [1]. For example, given the word \"cat\", they mark beginning and end with angled brackets and use all n-grams of length 3 to 6 as subwords, yielding S_cat = {〈ca, at〉, cat} [1]. Morfessor is used to probabilistically segment words into morphemes, and the Morfessor model is trained using raw text so it is entirely unsupervised [1]. For the word \"subsequent\", they get S_subsequent = {〈sub, sequent〉} [1].",
+  "validation": {
+   "citations": [
+    1
+   ],
+   "valid_citations": [
+    1
+   ],
+   "n_invalid": 0,
+   "has_citations": true
+  }
+ },
+ {
+  "question_id": "4c07c33dfaf4f3e6db55e377da6fa69825d0ba15",
+  "paper_id": "1610.09225",
+  "question": "What is the dimension of the embeddings?",
+  "qtype": "extractive",
+  "gold_answer": "300",
+  "evidence": [
+   "Word2vec representation is far better, advanced and a recent technique which functions by mapping words to a 300 dimensional vector representations. Once every word of the language has been mapped to a unique vector, vectors of words can be summed up yielding a resultant vector for any given collection of words BIBREF19 . Relationship between the words is exactly retained in this form of representation. Word vectors difference between Rome and Italy is very close to the difference between vectors of France and Paris This sustained relationship between word concepts makes word2vec model very attractive for textual analysis. In this representation, resultant vector which is sum of 300 dimensional vectors of all words in a tweet acts as features to the model."
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:2001.01269:8",
+    "score": 0.9897
+   },
+   {
+    "chunk_id": "B:1807.07279:6",
+    "score": 0.9864
+   },
+   {
+    "chunk_id": "B:1807.07279:10",
+    "score": 0.98
+   },
+   {
+    "chunk_id": "B:1802.00396:16",
+    "score": 0.9414
+   },
+   {
+    "chunk_id": "B:1706.01875:3",
+    "score": 0.8792
+   }
+  ],
+  "top_score": 0.989677369594574,
+  "hit5": false,
+  "mrr": 0.0,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "2da4c3679111dd92a1d0869dae353ebe5989dfd2",
+  "paper_id": "1908.08717",
+  "question": "What are four major corpora of French broadcast?",
+  "qtype": "extractive",
+  "gold_answer": "ESTER1, ESTER2, ETAPE, REPERE",
+  "evidence": [
+   "Surprisingly, as data is said to be “the new oil\", few data sets are available for ASR systems. The best known are corpora like TIMIT BIBREF10, Switchboard BIBREF11 or Fisher BIBREF12 which date back to the early 1990s. The scarceness of available corpora is justified by the fact that gathering and annotating audio data is costly both in terms of money and time. Telephone conversations and broadcast recordings have been the primary source of spontaneous speech used. Out of all the 130 audio resources proposed by LDC to train automatic speech recognition systems in English, approximately 14% of them are based on broadcast news and conversation. For French speech technologies, four corpora containing radio and TV broadcast are the most widely used: ESTER1 BIBREF13, ESTER2 BIBREF14, ETAPE BIBREF15 and REPERE BIBREF16. These four corpora have been built alongside evaluation campaigns and are still, to our knowledge, the largest French ones of their type available to date."
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:1908.08717:3",
+    "score": 0.9988
+   },
+   {
+    "chunk_id": "B:1908.08717:1",
+    "score": 0.9984
+   },
+   {
+    "chunk_id": "B:1908.08717:0",
+    "score": 0.9859
+   },
+   {
+    "chunk_id": "B:2002.01320:1",
+    "score": 0.9781
+   },
+   {
+    "chunk_id": "B:1908.08717:9",
+    "score": 0.8841
+   }
+  ],
+  "top_score": 0.9988458156585693,
+  "hit5": true,
+  "mrr": 0.5,
+  "refused": false,
+  "answer": "The four major corpora of French broadcast are ESTER1, ESTER2, ETAPE and REPERE [1][2]. These four collections contain radio and/or TV broadcasts aired between 1998 and 2013 [1].",
+  "validation": {
+   "citations": [
+    1,
+    2
+   ],
+   "valid_citations": [
+    1,
+    2
+   ],
+   "n_invalid": 0,
+   "has_citations": true
+  }
+ },
+ {
+  "question_id": "12c50dea84f9a8845795fa8b8c1679328bd66246",
+  "paper_id": "1910.10781",
+  "question": "What datasets did they use for evaluation?",
+  "qtype": "extractive",
+  "gold_answer": "CSAT dataset, 20 newsgroups, Fisher Phase 1 corpus",
+  "evidence": [
+   "We evaluated our models on 3 different datasets:",
+   "CSAT dataset for CSAT prediction, consisting of spoken transcripts (automatic via ASR).",
+   "20 newsgroups for topic identification task, consisting of written text;",
+   "Fisher Phase 1 corpus for topic identification task, consisting of spoken transcripts (manual);"
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:1911.07555:1",
+    "score": 0.998
+   },
+   {
+    "chunk_id": "B:1611.02988:3",
+    "score": 0.9957
+   },
+   {
+    "chunk_id": "B:2003.04866:1",
+    "score": 0.9932
+   },
+   {
+    "chunk_id": "B:2003.04866:2",
+    "score": 0.9921
+   },
+   {
+    "chunk_id": "B:1910.08293:10",
+    "score": 0.9914
+   }
+  ],
+  "top_score": 0.9980411529541016,
+  "hit5": false,
+  "mrr": 0.0,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "11e8bd4abf5f8bdabad3e8f0691e6d0ad6c326af",
+  "paper_id": "1909.08970",
+  "question": "What is the baseline?",
+  "qtype": "extractive",
+  "gold_answer": "NO-MOVE, RANDOM, JUMP",
+  "evidence": [
+   "We provide three simple baselines for the RUN task: (1) NO-MOVE: the only position considered is the starting point; (2) RANDOM: As in BIBREF4, turn to a randomly selected heading, then execute a number of *WALK actions of an average route; (3) JUMP: at each sentence, extract entities from the map and move between them in the order they appear. If the *WALK action is invalid we take a random *TURN action."
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:1610.08815:10",
+    "score": 0.973
+   },
+   {
+    "chunk_id": "B:1809.01541:1",
+    "score": 0.8965
+   },
+   {
+    "chunk_id": "B:1710.07960:7",
+    "score": 0.7924
+   },
+   {
+    "chunk_id": "B:2002.04095:7",
+    "score": 0.7838
+   },
+   {
+    "chunk_id": "B:1707.06806:5",
+    "score": 0.6029
+   }
+  ],
+  "top_score": 0.9729542136192322,
+  "hit5": false,
+  "mrr": 0.0,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "a74190189a6ced2a2d5b781e445e36f4e527e82a",
+  "paper_id": "1912.00667",
+  "question": "How are the accuracy merits of the approach demonstrated?",
+  "qtype": "extractive",
+  "gold_answer": "significant improvements clearly demonstrate that our approach is effective at improving model performance",
+  "evidence": [
+   "Our approach improves LR by 5.17% (Accuracy) and 18.38% (AUC), and MLP by 10.71% (Accuracy) and 30.27% (AUC) on average. Such significant improvements clearly demonstrate that our approach is effective at improving model performance. We observe that the target models generally converge between the 7th and 9th iteration on both datasets when performance is measured by AUC. The performance can slightly degrade when the models are further trained for more iterations on both datasets. This is likely due to the fact that over time, the newly discovered keywords entail lower novel information for model training. For instance, for the CyberAttack dataset the new keyword in the 9th iteration `election' frequently co-occurs with the keyword `russia' in the 5th iteration (in microposts that connect Russian hackers with US elections), thus bringing limited new information for improving the model performance. As a side remark, we note that the models converge faster when performance is measured by accuracy. Such a comparison result confirms the difference between the metrics and shows the necessity for more keywords to discriminate event-related microposts from non event-related ones."
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:1912.00667:9",
+    "score": 0.8838
+   },
+   {
+    "chunk_id": "B:1908.04042:8",
+    "score": 0.8431
+   },
+   {
+    "chunk_id": "B:1908.04042:7",
+    "score": 0.8424
+   },
+   {
+    "chunk_id": "B:1909.04002:9",
+    "score": 0.7226
+   },
+   {
+    "chunk_id": "B:1901.08079:22",
+    "score": 0.4973
+   }
+  ],
+  "top_score": 0.8837615847587585,
+  "hit5": false,
+  "mrr": 0.0,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "3116453e35352a3a90ee5b12246dc7f2e60cfc59",
+  "paper_id": "1910.14076",
+  "question": "To what baseline models is proposed model compared?",
+  "qtype": "extractive",
+  "gold_answer": "support vector machine classifier (SVM), logistic regression classifier (LR), Naive Bayes classifier (NB), random forest (RF), CNN, LSTM , LSTM-soft, LSTM-self",
+  "evidence": [
+   "TF-IDF: We applied TF-IDF features as inputs to four classifiers: support vector machine classifier (SVM), logistic regression classifier (LR), Naive Bayes classifier (NB) and random forest (RF); CNN: We followed the same architecture as BIBREF9; LSTM: We applied an LSTM model BIBREF20 to classify the sentences with pre-trained word embeddings;LSTM-soft: We then added a soft-attention BIBREF21 layer on top of the LSTM model where we computed soft alignment scores over each of the hidden states; LSTM-self: We applied a self-attention layer BIBREF22 to LSTM model. We denote the content vector as $c_i$ for each sentence $i$, as the input to the last classification layer."
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:1706.00139:10",
+    "score": 0.9978
+   },
+   {
+    "chunk_id": "B:1901.10133:3",
+    "score": 0.9957
+   },
+   {
+    "chunk_id": "B:1905.10851:11",
+    "score": 0.9957
+   },
+   {
+    "chunk_id": "B:1905.10851:7",
+    "score": 0.9905
+   },
+   {
+    "chunk_id": "B:1701.02962:9",
+    "score": 0.9883
+   }
+  ],
+  "top_score": 0.9978214502334595,
+  "hit5": false,
+  "mrr": 0.0,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "ecc63972b2783ee39b3e522653cfb6dc5917d522",
+  "paper_id": "1706.09673",
+  "question": "How do they encourage understanding of literature as part of their objective function?",
+  "qtype": "abstractive",
+  "gold_answer": "They group the existing works in terms of the objective function they optimize - within-tweet relationships, inter-tweet relationships, autoencoder, and weak supervision.",
+  "evidence": [
+   "Despite this, there is a lack of prior work which surveys the tweet-specific unsupervised representation learning models. In this work, we attempt to fill this gap by investigating the models in an organized fashion. Specifically, we group the models based on the objective function it optimizes. We believe this work can aid the understanding of the existing literature. We conclude the paper by presenting interesting future research directions, which we believe are fruitful in advancing this field by building high-quality tweet representation learning models.",
+   "There are various models spanning across different model architectures and objective functions in the literature to compute tweet representation in an unsupervised fashion. These models work in a semi-supervised way - the representations generated by the model is fed to an off-the-shelf predictor like Support Vector Machines (SVM) to solve a particular downstream task. These models span across a wide variety of neural network based architectures including average of word vectors, convolutional-based, recurrent-based and so on. We believe that the performance of these models is highly dependent on the objective function it optimizes – predicting adjacent word (within-tweet relationships), adjacent tweet (inter-tweet relationships), the tweet itself (autoencoder), modeling from structured resources like paraphrase databases and weak supervision. In this section, we provide the first of its kind survey of the recent tweet-specific unsupervised models in an organized fashion to understand the literature. Specifically, we categorize each model based on the optimized objective function as shown in Figure FIGREF1 . Next, we study each category one by one."
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:1909.09534:0",
+    "score": 0.0623
+   },
+   {
+    "chunk_id": "B:1807.07279:6",
+    "score": 0.0232
+   },
+   {
+    "chunk_id": "B:1907.01468:20",
+    "score": 0.0219
+   },
+   {
+    "chunk_id": "B:1802.08636:4",
+    "score": 0.0119
+   },
+   {
+    "chunk_id": "B:1802.08636:1",
+    "score": 0.0036
+   }
+  ],
+  "top_score": 0.06232991814613342,
+  "hit5": false,
+  "mrr": 0.0,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "8c48c726bb17a17d70ab29db4d65a93030dd5382",
+  "paper_id": "1905.07791",
+  "question": "How much data is needed to train the task-specific encoder?",
+  "qtype": "abstractive",
+  "gold_answer": "57,505 sentences",
+  "evidence": [
+   "Our contributions in this work are summarized as follows. We define a task difficulty prediction task and show how this is related to, but distinct from, inter-worker agreement. We introduce a new model for difficulty prediction combining learned representations induced via a pre-trained `universal' sentence encoder BIBREF6 , and a sentence encoder learned from scratch for this task. We show that predicting annotation difficulty can be used to improve the task routing and model performance for a biomedical information extraction task. Our results open up a new direction for ensuring corpus quality. We believe that item difficulty prediction will likely be useful in other, non-specialized tasks as well, and that the most effective data collection in specialized domains requires research addressing the fundamental questions we examine here.",
+   "An abstract may contain some `easy' and some `difficult' sentences. We thus perform our analysis at the sentence level. We split abstracts into sentences using spaCy. We excluded sentences that comprise fewer than two tokens, as these are likely an artifact of errors in sentence splitting. In total, this resulted in 57,505 and 2,428 sentences in the train and test set abstracts, respectively."
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:1908.11047:3",
+    "score": 0.9717
+   },
+   {
+    "chunk_id": "B:1909.07575:11",
+    "score": 0.9594
+   },
+   {
+    "chunk_id": "B:1912.04961:11",
+    "score": 0.9231
+   },
+   {
+    "chunk_id": "B:1908.08345:6",
+    "score": 0.8437
+   },
+   {
+    "chunk_id": "B:1910.07601:7",
+    "score": 0.8313
+   }
+  ],
+  "top_score": 0.9716950058937073,
+  "hit5": false,
+  "mrr": 0.0,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "06cc8fcafc0880cf69a2514bb7341642b9833041",
+  "paper_id": "1809.06537",
+  "question": "what is the size of the real-world civil case dataset?",
+  "qtype": "abstractive",
+  "gold_answer": "100 000 documents",
+  "evidence": [
+   "For experiments, we train and evaluate our models in the civil law system of mainland China. We collect and construct a large-scale real-world data set of INLINEFORM0 case documents that the Supreme People's Court of People's Republic of China has made publicly available. Fact description, pleas, and results can be extracted easily from these case documents with regular expressions, since the original documents have special typographical characteristics indicating the discourse structure. We also take into account law articles and their corresponding juridical interpretations. We also implement and evaluate previous methods on our dataset, which prove to be strong baselines."
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:1809.06537:1",
+    "score": 0.8995
+   },
+   {
+    "chunk_id": "B:1909.01362:4",
+    "score": 0.703
+   },
+   {
+    "chunk_id": "B:1809.06537:2",
+    "score": 0.6069
+   },
+   {
+    "chunk_id": "B:1809.06537:7",
+    "score": 0.5958
+   },
+   {
+    "chunk_id": "B:1809.06537:6",
+    "score": 0.3908
+   }
+  ],
+  "top_score": 0.8994704484939575,
+  "hit5": true,
+  "mrr": 1.0,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "aefa333b2cf0a4000cd40566149816f5b36135e7",
+  "paper_id": "1604.05372",
+  "question": "What evaluation metric do they use?",
+  "qtype": "abstractive",
+  "gold_answer": "Accuracy",
+  "evidence": [
+   "To test all the possible combinations of parameters, we divided the bilingual dictionary into 4500 noun pairs used as a training set and 500 noun pairs used as a test set. We then learned transformation matrices on the training set using both training algorithms (CBOW and SkipGram) and several values of regularization $\\lambda $ from 0 to 5, with a step of 0.5. The resulting matrices were applied to the Ukrainian vectors from the test set and the corresponding Russian `translations' were calculated. The ratio of correct `translations' (matches) was used as an evaluation measure. It came out that regularization only worsened the results for both algorithms, so in the Table 1 we report the results without regularization."
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:1910.08293:11",
+    "score": 0.9958
+   },
+   {
+    "chunk_id": "B:1912.10011:8",
+    "score": 0.9957
+   },
+   {
+    "chunk_id": "B:1910.08293:10",
+    "score": 0.9797
+   },
+   {
+    "chunk_id": "B:1908.01294:13",
+    "score": 0.9692
+   },
+   {
+    "chunk_id": "B:1611.03599:8",
+    "score": 0.9653
+   }
+  ],
+  "top_score": 0.9957528114318848,
+  "hit5": false,
+  "mrr": 0.0,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "66c96c297c2cffdf5013bab5e95b59101cb38655",
+  "paper_id": "2003.03106",
+  "question": "What is the performance of BERT on the task?",
+  "qtype": "abstractive",
+  "gold_answer": "F1 scores are:\nHUBES-PHI: Detection(0.965), Classification relaxed (0.95), Classification strict (0.937)\nMedoccan: Detection(0.972), Classification (0.967)",
+  "evidence": [
+   "To finish with this experiment set, Table also shows the strict classification precision, recall and F1-score for the compared systems. Despite the fact that, in general, the systems obtain high values, BERT outperforms them again. BERT's F1-score is 1.9 points higher than the next most competitive result in the comparison. More remarkably, the recall obtained by BERT is about 5 points above.",
+   "FLOAT SELECTED: Table 5: Results of Experiment A: NUBES-PHI",
+   "The results of the two MEDDOCAN scenarios –detection and classification– are shown in Table . These results follow the same pattern as in the previous experiments, with the CRF classifier being the most precise of all, and BERT outperforming both the CRF and spaCy classifiers thanks to its greater recall. We also show the results of mao2019hadoken who, despite of having used a BERT-based system, achieve lower scores than our models. The reason why it should be so remain unclear.",
+   "FLOAT SELECTED: Table 8: Results of Experiment B: MEDDOCAN"
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:1907.06292:7",
+    "score": 0.9979
+   },
+   {
+    "chunk_id": "B:2003.08385:6",
+    "score": 0.9971
+   },
+   {
+    "chunk_id": "B:1910.10781:2",
+    "score": 0.9966
+   },
+   {
+    "chunk_id": "B:1908.07245:1",
+    "score": 0.9952
+   },
+   {
+    "chunk_id": "B:1910.12574:4",
+    "score": 0.9951
+   }
+  ],
+  "top_score": 0.9979285001754761,
+  "hit5": false,
+  "mrr": 0.0,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "dfca00be3284cc555a6a4eac4831471fb1f5875b",
+  "paper_id": "1910.14076",
+  "question": "How big is dataset for testing?",
+  "qtype": "abstractive",
+  "gold_answer": "30 terms, each term-sanse pair has around 15 samples for testing",
+  "evidence": [
+   "Our testing dataset takes MIMIC-III BIBREF18 and PubMed as data sources. Here we are referring to all the notes data from MIMIC-III (NOTEEVENTS table ) and Case Reports articles from PubMed, as these contents are close to medical notes. To create the test set, we first followed the approach by BIBREF6 who applied an auto-generating method. Initially, we built a term-sense dictionary from the training dataset. Then we did matching for the sense words or phrases in the MIMIC-III notes dataset, and once there is a match, we replaced the words or phrases with the abbreviation term . We then asked two researchers with a medical background to check the matched samples manually with the following judgment: given this sentence and the abbreviation term and its sense, do you think the content is enough for you to guess the sense and whether this is the right sense? To estimate the agreement on the annotations, we selected a subset which contains 120 samples randomly and let the two annotators annotate individually. We got a Kappa score BIBREF27 of 0.96, which is considered as a near perfect agreement. We then distributed the work to the two annotators, and each of them labeled a half of the dataset, which means each sample was only labeled by a single annotator. For some rare term-sense pairs, we failed to find samples from MIMIC-III. The annotators then searched these senses via PubMed data source manually, aiming to find clinical notes-like sentences. They picked good sentences from these results as testing samples where the keywords exist and the content is informative. For those senses that are extremely rare, we let the annotators create sentences in the clinical note style as testing samples according to their experiences. Eventually, we have a balanced testing dataset, where each term-sense pair has around 15 samples for testing (on average, each pair has 14.56 samples and the median sample number is 15), and a comparison with training dataset is shown in Figure FIGREF11. Due to the difficulty for collecting the testing dataset, we decided to only collect for a random selection of 30 terms. On average, it took few hours to generate testing samples for each abbreviation term per researcher."
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:1910.10781:4",
+    "score": 0.9686
+   },
+   {
+    "chunk_id": "B:1801.06482:2",
+    "score": 0.9678
+   },
+   {
+    "chunk_id": "B:1910.14076:7",
+    "score": 0.9553
+   },
+   {
+    "chunk_id": "B:1810.08699:4",
+    "score": 0.9223
+   },
+   {
+    "chunk_id": "B:1610.00956:0",
+    "score": 0.869
+   }
+  ],
+  "top_score": 0.968643307685852,
+  "hit5": false,
+  "mrr": 0.0,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "6b9b9e5d154cb963f6d921093539490daa5ebbae",
+  "paper_id": "1908.06941",
+  "question": "What novel PMI variants are introduced?",
+  "qtype": "abstractive",
+  "gold_answer": "clipped PMI; NNEGPMI",
+  "evidence": [
+   "where * denotes summation over the corresponding index. To deal with negative values, we propose clipped $\\mathit {PMI}$,",
+   "which is equivalent to $\\mathit {PPMI}$ when $z = 0$.",
+   "such that $NPMI(w,c) = -1$ when $(w,c)$ never cooccur, $NPMI(w,c) = 0$ when they are independent, and $NPMI(w,c) = 1$ when they always cooccur together. This effectively captures the entire negative spectrum, but has the downside of normalization which discards scale information. In practice we find this works poorly if done symmetrically, so we introduce a variant called $\\mathit {NNEGPMI}$ which only normalizes $\\mathit {\\texttt {-}PMI}$:"
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:1908.06941:0",
+    "score": 0.9981
+   },
+   {
+    "chunk_id": "B:1908.06941:1",
+    "score": 0.996
+   },
+   {
+    "chunk_id": "B:1908.06941:3",
+    "score": 0.9915
+   },
+   {
+    "chunk_id": "B:1908.06941:4",
+    "score": 0.9893
+   },
+   {
+    "chunk_id": "B:1811.05711:13",
+    "score": 0.9649
+   }
+  ],
+  "top_score": 0.9980904459953308,
+  "hit5": true,
+  "mrr": 0.3333333333333333,
+  "refused": false,
+  "answer": "The paper proposes two PMI variants that account for the spectrum of negative PMI [1][2]. One variant is CPMI with a shift parameter z, where z = -2 is found to capture most of the negative spectrum and consistently gives better results than smaller values [3]. The other variant is NNEGPMI, which only normalizes negative PMI, introduced because symmetric normalization (NPMI) works poorly in practice [3].",
+  "validation": {
+   "citations": [
+    1,
+    2,
+    3
+   ],
+   "valid_citations": [
+    1,
+    2,
+    3
+   ],
+   "n_invalid": 0,
+   "has_citations": true
+  }
+ },
+ {
+  "question_id": "8dd8e5599fc56562f2acbc16dd8544689cddd938",
+  "paper_id": "1803.09123",
+  "question": "How do they define similar equations?",
+  "qtype": "abstractive",
+  "gold_answer": "By using Euclidean distance computed between the context vector representations of the equations",
+  "evidence": [
+   "In addition to words, EqEmb models can capture the semantic similarity between equations in the collection. We performed qualitative analysis of the model performance using all discovered equations across the 4 collection. Table TABREF24 shows the query equation used in the previous analysis and its 5 most similar equations discovered using EqEmb-U. For qualitative comparisons across the other embedding models, in Appendix A we provide results over the same query using CBOW, PV-DM, GloVe and EqEmb. In Appendix A reader should notice the difference in performance between EqEmb-U and EqEmb compared to existing embedding models which fail to discover semantically similar equations. tab:irexample1,tab:nlpexample2 show two additional example equation and its 5 most similar equations and words discovered using the EqEmb model. Similar words were ranked by computing Cosine distance between the embedding vector ( INLINEFORM0 ) representation of the query equation and the context vector representation of the words ( INLINEFORM1 ). Similar equations were discovered using Euclidean distance computed between the context vector representations of the equations ( INLINEFORM2 ). We give additional example results in Appendix B."
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:1803.09123:8",
+    "score": 0.9982
+   },
+   {
+    "chunk_id": "B:1803.09123:9",
+    "score": 0.993
+   },
+   {
+    "chunk_id": "B:1803.09123:7",
+    "score": 0.9856
+   },
+   {
+    "chunk_id": "B:1609.00559:3",
+    "score": 0.9758
+   },
+   {
+    "chunk_id": "B:1809.00540:2",
+    "score": 0.9446
+   }
+  ],
+  "top_score": 0.9981626868247986,
+  "hit5": true,
+  "mrr": 0.3333333333333333,
+  "refused": false,
+  "answer": "Similar equations were discovered using Euclidean distance computed between the context vector representations of the equations [1][3]. Similar words were ranked by computing Cosine distance between the embedding vector representation of the query equation and the context vector representation of the words [3].",
+  "validation": {
+   "citations": [
+    1,
+    3
+   ],
+   "valid_citations": [
+    1,
+    3
+   ],
+   "n_invalid": 0,
+   "has_citations": true
+  }
+ },
+ {
+  "question_id": "443d2448136364235389039cbead07e80922ec5c",
+  "paper_id": "1712.00991",
+  "question": "What summarization algorithms did the authors experiment with?",
+  "qtype": "abstractive",
+  "gold_answer": "LSA, TextRank, LexRank and ILP-based summary.",
+  "evidence": [
+   "We considered a dataset of 100 employees, where for each employee multiple peer comments were recorded. Also, for each employee, a manual summary was generated by an HR personnel. The summaries generated by our ILP-based approach were compared with the corresponding manual summaries using the ROUGE BIBREF22 unigram score. For comparing performance of our ILP-based summarization algorithm, we explored a few summarization algorithms provided by the Sumy package. A common parameter which is required by all these algorithms is number of sentences keep in the final summary. ILP-based summarization requires a similar parameter K, which is automatically decided based on number of total candidate phrases. Assuming a sentence is equivalent to roughly 3 phrases, for Sumy algorithms, we set number of sentences parameter to the ceiling of K/3. Table TABREF51 shows average and standard deviation of ROUGE unigram f1 scores for each algorithm, over the 100 summaries. The performance of ILP-based summarization is comparable with the other algorithms, as the two sample t-test does not show statistically significant difference. Also, human evaluators preferred phrase-based summary generated by our approach to the other sentence-based summaries.",
+   "FLOAT SELECTED: Table 9. Comparative performance of various summarization algorithms"
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:1712.00991:8",
+    "score": 0.9973
+   },
+   {
+    "chunk_id": "B:1604.00400:5",
+    "score": 0.9952
+   },
+   {
+    "chunk_id": "B:1604.00400:7",
+    "score": 0.9935
+   },
+   {
+    "chunk_id": "B:1604.00400:8",
+    "score": 0.9871
+   },
+   {
+    "chunk_id": "B:1908.08345:8",
+    "score": 0.9835
+   }
+  ],
+  "top_score": 0.9972731471061707,
+  "hit5": false,
+  "mrr": 0.0,
+  "refused": false,
+  "answer": "The authors explored a few summarization algorithms provided by the Sumy package [1]. They also applied 9 well-known summarization approaches on the TAC 2014 scientific summarization dataset, including LexRank [3], Latent Semantic Analysis (LSA) based summarization [3], Maximal Marginal Relevance (MMR) [3][4], citation based summarization [4], summarization using frequency of the words [4], SumBasic [4], summarization using citation-context and discourse structure [4], KL Divergence [4], and summarization based on Topic Models [4].",
+  "validation": {
+   "citations": [
+    1,
+    3,
+    4
+   ],
+   "valid_citations": [
+    1,
+    3,
+    4
+   ],
+   "n_invalid": 0,
+   "has_citations": true
+  }
+ },
+ {
+  "question_id": "5260cb56b7d127772425583c5c28958c37cb9bea",
+  "paper_id": "1701.04056",
+  "question": "How long of dialog history is captured?",
+  "qtype": "abstractive",
+  "gold_answer": "two previous turns",
+  "evidence": [
+   "The previously proposed contextual language models, such as DRNNLM and CCDCLM, treat dialog history as a sequence of inputs, without modeling dialog interactions. A dialog turn from one speaker may not only be a direct response to the other speaker's query, but also likely to be a continuation of his own previous statement. Thus, when modeling turn $k$ in a dialog, we propose to connect the last RNN state of turn $k-2$ directly to the starting RNN state of turn $k$ , instead of letting it to propagate through the RNN for turn $k-1$ . The last RNN state of turn $k-1$ serves as the context vector to turn $k$ , which is fed to turn $k$ 's RNN hidden state at each time step together with the word input. The model architecture is as shown in Figure 2 . The context vector $c$ and the initial RNN hidden state for the $k$ th turn $h^{\\mathbf {U}_k}_{0}$ are defined as:"
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:1805.06966:10",
+    "score": 0.9616
+   },
+   {
+    "chunk_id": "B:1701.04056:3",
+    "score": 0.4067
+   },
+   {
+    "chunk_id": "B:1701.04056:0",
+    "score": 0.3342
+   },
+   {
+    "chunk_id": "B:1603.09631:4",
+    "score": 0.2916
+   },
+   {
+    "chunk_id": "B:1903.03530:8",
+    "score": 0.2559
+   }
+  ],
+  "top_score": 0.9615558385848999,
+  "hit5": true,
+  "mrr": 0.5,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "f1e90a553a4185a4b0299bd179f4f156df798bce",
+  "paper_id": "1810.05241",
+  "question": "What were the baselines?",
+  "qtype": "abstractive",
+  "gold_answer": "CopyRNN (Meng et al., 2017), Multi-Task (Ye and Wang, 2018), and TG-Net (Chen et al., 2018b)",
+  "evidence": [
+   "We report our model's performance on the present-keyphrase portion of the KP20k dataset in Table TABREF35 . To compare with previous works, we provide compute INLINEFORM0 and INLINEFORM1 scores. The new proposed F INLINEFORM2 @ INLINEFORM3 metric indicates consistent ranking with INLINEFORM4 for most cases. Due to its target number sensitivity, we find that its value is closer to INLINEFORM5 for KP20k and Krapivin where average target keyphrases is less and closer to INLINEFORM6 for the other three datasets.",
+   "FLOAT SELECTED: Table 2: Present keyphrase predicting performance on KP20K test set. Compared with CopyRNN (Meng et al., 2017), Multi-Task (Ye and Wang, 2018), and TG-Net (Chen et al., 2018b)."
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:1802.06024:16",
+    "score": 0.952
+   },
+   {
+    "chunk_id": "B:1707.06806:5",
+    "score": 0.942
+   },
+   {
+    "chunk_id": "B:1911.00841:6",
+    "score": 0.9398
+   },
+   {
+    "chunk_id": "B:1901.01010:8",
+    "score": 0.8729
+   },
+   {
+    "chunk_id": "B:2002.04095:7",
+    "score": 0.8483
+   }
+  ],
+  "top_score": 0.9519599080085754,
+  "hit5": false,
+  "mrr": 0.0,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "bd40f33452da7711b65faaa248aca359b27fddb6",
+  "paper_id": "2003.08385",
+  "question": "What was the performance of multilingual BERT?",
+  "qtype": "abstractive",
+  "gold_answer": "BERT had 76.6 F1 macro score on x-stance dataset.",
+  "evidence": [
+   "To put the supervised score into context we list scores that variants of Bert have achieved on other stance detection datasets in Table TABREF46. It seems that the supervised part of x-stance has a similar difficulty as the SemEval-2016 BIBREF0 or MPCHI BIBREF22 datasets on which Bert has previously been evaluated.",
+   "FLOAT SELECTED: Table 6: Performance of BERT-like models on different supervised stance detection benchmarks."
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:2003.08385:6",
+    "score": 0.999
+   },
+   {
+    "chunk_id": "B:2002.07306:1",
+    "score": 0.9957
+   },
+   {
+    "chunk_id": "B:1909.09587:1",
+    "score": 0.9954
+   },
+   {
+    "chunk_id": "B:2003.04866:40",
+    "score": 0.9953
+   },
+   {
+    "chunk_id": "B:1909.09587:2",
+    "score": 0.995
+   }
+  ],
+  "top_score": 0.9989570379257202,
+  "hit5": false,
+  "mrr": 0.0,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "559c68802ee2bb8b11e2188127418ca3a6155ba7",
+  "paper_id": "2002.01320",
+  "question": "Is the data in CoVoST annotated for dialect?",
+  "qtype": "boolean",
+  "gold_answer": "No",
+  "evidence": [],
+  "hits": [
+   {
+    "chunk_id": "B:2002.01320:1",
+    "score": 0.9912
+   },
+   {
+    "chunk_id": "B:2002.01320:3",
+    "score": 0.9855
+   },
+   {
+    "chunk_id": "B:2002.01320:0",
+    "score": 0.9725
+   },
+   {
+    "chunk_id": "B:2002.01320:7",
+    "score": 0.9688
+   },
+   {
+    "chunk_id": "B:2002.01320:6",
+    "score": 0.9663
+   }
+  ],
+  "top_score": 0.9911655783653259,
+  "hit5": false,
+  "mrr": 0.0,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "d5a8fd8bb48dd1f75927e874bdea582b4732a0cd",
+  "paper_id": "1901.01010",
+  "question": "Did they release their data set of academic papers?",
+  "qtype": "boolean",
+  "gold_answer": "No",
+  "evidence": [],
+  "hits": [
+   {
+    "chunk_id": "B:1709.10367:8",
+    "score": 0.8762
+   },
+   {
+    "chunk_id": "B:1911.07555:1",
+    "score": 0.7633
+   },
+   {
+    "chunk_id": "B:1901.01010:5",
+    "score": 0.6243
+   },
+   {
+    "chunk_id": "B:2004.01862:1",
+    "score": 0.5004
+   },
+   {
+    "chunk_id": "B:1811.05711:23",
+    "score": 0.2306
+   }
+  ],
+  "top_score": 0.8762077689170837,
+  "hit5": false,
+  "mrr": 0.0,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "fc4ae12576ea3a85ea6d150b46938890d63a7d18",
+  "paper_id": "2003.11562",
+  "question": "Is the LSTM baseline a sub-word model?",
+  "qtype": "boolean",
+  "gold_answer": "Yes",
+  "evidence": [
+   "The original BERT has two training objectives: 'Masked language modelling', in which you mask input tokens randomly and then predict the masked tokens using the left and right context. Additionally, there is the 'next sentence prediction' task that jointly trains text-pair representations. For training the Masked language model the original BERT used Byte Pair Encoding (BPE) BIBREF10 for subword tokenization BIBREF11.For example the rare word \"unaffable\" to be split up into more frequent subwords such as [\"un\", \"##aff\", \"##able\"]. To remain consistent with experiments performed with LSTM's we use the morfessor for the subword tokenization in the Finnish Language. In Addition, we also apply boundary markers as in (Table TABREF7) and train two separate models using this distinction. We train with left-marked markings as the original BERT was trained with such a scheme and the left+right-marked as it was the previous SOTA with the Finnish Language. For the transformer-XL experiments, we just train with the left+right marked scheme."
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:1809.01541:1",
+    "score": 0.9825
+   },
+   {
+    "chunk_id": "B:1907.03187:2",
+    "score": 0.9701
+   },
+   {
+    "chunk_id": "B:2003.11562:2",
+    "score": 0.9664
+   },
+   {
+    "chunk_id": "B:1908.05828:2",
+    "score": 0.959
+   },
+   {
+    "chunk_id": "B:1809.01541:3",
+    "score": 0.9485
+   }
+  ],
+  "top_score": 0.9825415015220642,
+  "hit5": false,
+  "mrr": 0.0,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "cb384dc5366b693f28680374d31ff45356af0461",
+  "paper_id": "2003.03014",
+  "question": "Do they model semantics ",
+  "qtype": "boolean",
+  "gold_answer": "Yes",
+  "evidence": [
+   "We address this tension by training vector space models to represent the data, in which each unique word in a large corpus is represented by a vector (embedding) in high-dimensional space. The geometry of the resulting vector space captures many semantic relations between words. Furthermore, prior work has shown that vector space models trained on corpora from different time periods can capture semantic change BIBREF58, BIBREF59. For example, diachronic word embeddings reveal that the word gay meant “cheerful\" or “dapper\" in the early 20th century, but shifted to its current meaning of sexual orientation by the 1970s. Because word embeddings are created from real-world data, they contain real-world biases. For example, BIBREF37 demonstrated that gender stereotypes are deeply ingrained in these systems. Though problematic for the widespread use of these models in computational systems, these revealed biases indicate that word embeddings can actually be used to identify stereotypes about social groups and understand how they change over time BIBREF24."
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:1706.09673:2",
+    "score": 0.9909
+   },
+   {
+    "chunk_id": "B:1705.04153:9",
+    "score": 0.9571
+   },
+   {
+    "chunk_id": "B:1908.06941:6",
+    "score": 0.9541
+   },
+   {
+    "chunk_id": "B:1801.10293:8",
+    "score": 0.9461
+   },
+   {
+    "chunk_id": "B:1603.01514:1",
+    "score": 0.9442
+   }
+  ],
+  "top_score": 0.9909314513206482,
+  "hit5": false,
+  "mrr": 0.0,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "1097768b89f8bd28d6ef6443c94feb04c1a1318e",
+  "paper_id": "1901.01010",
+  "question": "Do the methods that work best on academic papers also work best on Wikipedia?",
+  "qtype": "boolean",
+  "gold_answer": "Yes",
+  "evidence": [
+   "We proposed to use visual renderings of documents to capture implicit document quality indicators, such as font choices, images, and visual layout, which are not captured in textual content. We applied neural network models to capture visual features given visual renderings of documents. Experimental results show that we achieve a 2.9% higher accuracy than state-of-the-art approaches based on textual features over Wikipedia, and performance competitive with or surpassing state-of-the-art approaches over arXiv. We further proposed a joint model, combining textual and visual representations, to predict the quality of a document. Experimental results show that our joint model outperforms the visual-only model in all cases, and the text-only model on Wikipedia and two subsets of arXiv. These results underline the feasibility of assessing document quality via visual features, and the complementarity of visual and textual document representations for quality assessment."
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:1901.01010:2",
+    "score": 0.9691
+   },
+   {
+    "chunk_id": "B:1901.01010:8",
+    "score": 0.9576
+   },
+   {
+    "chunk_id": "B:1901.01010:1",
+    "score": 0.9418
+   },
+   {
+    "chunk_id": "B:1901.01010:0",
+    "score": 0.9335
+   },
+   {
+    "chunk_id": "B:1603.01987:11",
+    "score": 0.8811
+   }
+  ],
+  "top_score": 0.9690621495246887,
+  "hit5": false,
+  "mrr": 0.0,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "00c57e45ac6afbdfa67350a57e81b4fad0ed2885",
+  "paper_id": "1701.08229",
+  "question": "Do they evaluate only on English datasets?",
+  "qtype": "boolean",
+  "gold_answer": "Yes",
+  "evidence": [
+   "Specifically, we conducted a feature ablation study to assess the informativeness of each feature group and a feature elimination study to determine the optimal feature sets for classifying Twitter tweets. We leveraged an existing, annotated Twitter dataset that was constructed based on a hierarchical model of depression-related symptoms BIBREF12 , BIBREF13 . The dataset contains 9,473 annotations for 9,300 tweets. Each tweet is annotated as no evidence of depression (e.g., “Citizens fear an economic depression\") or evidence of depression (e.g., “depressed over disappointment\"). If a tweet is annotated evidence of depression, then it is further annotated with one or more depressive symptoms, for example, depressed mood (e.g., “feeling down in the dumps\"), disturbed sleep (e.g., “another restless night\"), or fatigue or loss of energy (e.g., “the fatigue is unbearable\") BIBREF10 . For each class, every annotation (9,473 tweets) is binarized as the positive class e.g., depressed mood=1 or negative class e.g., not depressed mood=0."
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:2003.04866:1",
+    "score": 0.9941
+   },
+   {
+    "chunk_id": "B:1804.07789:10",
+    "score": 0.9926
+   },
+   {
+    "chunk_id": "B:2004.04721:0",
+    "score": 0.9831
+   },
+   {
+    "chunk_id": "B:2003.04866:7",
+    "score": 0.9795
+   },
+   {
+    "chunk_id": "B:2003.04866:2",
+    "score": 0.9785
+   }
+  ],
+  "top_score": 0.9941117167472839,
+  "hit5": false,
+  "mrr": 0.0,
+  "refused": false,
+  "answer": "No. The authors state that they conduct a systematic evaluation of several state-of-the-art representation models, showing large gaps between human and system performance in all languages [5]. They also benchmark a wide array of recent state-of-the-art monolingual and cross-lingual word representation models across their sample of languages [5]. Their evaluation includes 12 typologically diverse languages, with manually annotated evaluation sets of 1,888 concept pairs across those languages and 66 large cross-lingual evaluation sets [5]. They further present a first large-scale evaluation study on the ability of encoders pretrained on language modeling to reason over word-level semantic similarity in different languages [5].",
+  "validation": {
+   "citations": [
+    5
+   ],
+   "valid_citations": [
+    5
+   ],
+   "n_invalid": 0,
+   "has_citations": true
+  }
+ },
+ {
+  "question_id": "b9ea841b817ba23281c95c7a769873b840dee8d5",
+  "paper_id": "1805.07133",
+  "question": "did they collect their own data?",
+  "qtype": "boolean",
+  "gold_answer": "No",
+  "evidence": [
+   "We collected Japanese-Vietnamese parallel data from TED talks extracted from WIT3's corpus BIBREF15 . After removing blank and duplicate lines we obtained 106758 pairs of sentences. The validation set used in all experiments is dev2010 and the test set is tst2010."
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:1712.05999:3",
+    "score": 0.5964
+   },
+   {
+    "chunk_id": "B:1912.03627:1",
+    "score": 0.4754
+   },
+   {
+    "chunk_id": "B:1603.09631:2",
+    "score": 0.4224
+   },
+   {
+    "chunk_id": "B:1909.10012:3",
+    "score": 0.3851
+   },
+   {
+    "chunk_id": "B:1907.01468:6",
+    "score": 0.3513
+   }
+  ],
+  "top_score": 0.5964263081550598,
+  "hit5": false,
+  "mrr": 0.0,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "c0bee6539eb6956a7347daa9d2419b367bd02064",
+  "paper_id": "2003.03106",
+  "question": "Does BERT reach the best performance among all the algorithms compared?",
+  "qtype": "boolean",
+  "gold_answer": "No",
+  "evidence": [
+   "In this experiment set, our BERT implementation is compared to several systems that participated in the MEDDOCAN challenge: a CRF classifier BIBREF18, a spaCy entity recogniser BIBREF18, and NLNDE BIBREF12, the winner of the shared task and current state of the art for sensitive information detection and classification in Spanish clinical text. Specifically, we include the results of a domain-independent NLNDE model (S2), and the results of a model enriched with domain-specific embeddings (S3). Finally, we include the results obtained by mao2019hadoken with a CRF output layer on top of BERT embeddings. MEDDOCAN consists of two scenarios:",
+   "With regard to the winner of the MEDDOCAN shared task, the BERT-based model has not improved the scores obtained by neither the domain-dependent (S3) nor the domain-independent (S2) NLNDE model. However, attending to the obtained results, BERT remains only 0.3 F1-score points behind, and would have achieved the second position among all the MEDDOCAN shared task competitors. Taking into account that only 3% of the gold labels remain incorrectly annotated, the task can be considered almost solved, and it is not clear if the differences among the systems are actually significant, or whether they stem from minor variations in initialisation or a long-tail of minor labelling inconsistencies."
+  ],
+  "hits": [
+   {
+    "chunk_id": "B:2003.03106:10",
+    "score": 0.994
+   },
+   {
+    "chunk_id": "B:1907.06292:7",
+    "score": 0.9903
+   },
+   {
+    "chunk_id": "B:2004.02192:12",
+    "score": 0.9867
+   },
+   {
+    "chunk_id": "B:2003.03106:11",
+    "score": 0.9847
+   },
+   {
+    "chunk_id": "B:2003.03106:1",
+    "score": 0.9843
+   }
+  ],
+  "top_score": 0.99399334192276,
+  "hit5": true,
+  "mrr": 0.25,
+  "refused": false,
+  "answer": "Yes, BERT reaches the best performance among the compared algorithms in the experiments described [1][4]. In the sliding-window scenario, BERT gains 2.1 points of F1-score over the CRF-based approach [1], and BERT's F1-score is 1.9 points higher than the next most competitive result, with recall about 5 points above [1]. In the MEDDOCAN experiments, BERT outperforms both the CRF and spaCy classifiers thanks to its greater recall [4]. However, the BERT-based model did not improve the scores obtained by either the domain-dependent (S3) or domain-independent (S2) NLNDE model in the MEDDOCAN shared task, remaining only 0.3 F1-score points behind [4].",
+  "validation": {
+   "citations": [
+    1,
+    4
+   ],
+   "valid_citations": [
+    1,
+    4
+   ],
+   "n_invalid": 0,
+   "has_citations": true
+  }
+ },
+ {
+  "question_id": "a66a275a817f980c36e0b67d2e00bd823f63abf8",
+  "paper_id": "1903.11283",
+  "question": "How do they measure style transfer success?",
+  "qtype": "unanswerable",
+  "gold_answer": null,
+  "evidence": [],
+  "hits": [
+   {
+    "chunk_id": "B:1903.11283:8",
+    "score": 0.9916
+   },
+   {
+    "chunk_id": "B:1903.11283:9",
+    "score": 0.9858
+   },
+   {
+    "chunk_id": "B:1910.03634:3",
+    "score": 0.9576
+   },
+   {
+    "chunk_id": "B:1910.03634:4",
+    "score": 0.9481
+   },
+   {
+    "chunk_id": "B:1903.11283:0",
+    "score": 0.921
+   }
+  ],
+  "top_score": 0.9916315674781799,
+  "hit5": false,
+  "mrr": null,
+  "refused": false,
+  "answer": "The evaluators assessed style transfer by having three human evaluators score each translated sentence, where a judgment that the sentence is more formal counts as +1, more informal as −1, and neither as 0 [1]. For each pair of sentences, the average score given by the three evaluators was calculated [1]. They then computed the root mean square error (RMSE) between these average scores and the desired values (+1 if the aim was to make the sentence more formal, −1 if more informal), where an RMSE of 0 would mean always transferring style in the right direction and 2 would mean always transferring in the wrong direction [1]. On the English set the RMSE is 0.78, and on Estonian 0.89 [1]. Of the 55 English sentences that differed from their source sentences, in 33 cases the sign of the average human score matched the desired one, in 7 it did not, and in 15 no change in style was observed by humans [1]. In Estonian, 36 sentences showed the right direction of style transfer, 10 wrong, and 22 no change [2].",
+  "validation": {
+   "citations": [
+    1,
+    2
+   ],
+   "valid_citations": [
+    1,
+    2
+   ],
+   "n_invalid": 0,
+   "has_citations": true
+  }
+ },
+ {
+  "question_id": "eda4869c67fe8bbf83db632275f053e7e0241e8c",
+  "paper_id": "1706.09673",
+  "question": "Which dataset do they use?",
+  "qtype": "unanswerable",
+  "gold_answer": null,
+  "evidence": [],
+  "hits": [
+   {
+    "chunk_id": "B:1901.01010:5",
+    "score": 0.9724
+   },
+   {
+    "chunk_id": "B:1910.10781:4",
+    "score": 0.9651
+   },
+   {
+    "chunk_id": "B:1909.01362:4",
+    "score": 0.9553
+   },
+   {
+    "chunk_id": "B:1610.00956:3",
+    "score": 0.9496
+   },
+   {
+    "chunk_id": "B:1809.00530:7",
+    "score": 0.9196
+   }
+  ],
+  "top_score": 0.9723767638206482,
+  "hit5": false,
+  "mrr": null,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "4dc268e3d482e504ca80d2ab514e68fd9b1c3af1",
+  "paper_id": "1908.04042",
+  "question": "how many tags do they look at?",
+  "qtype": "unanswerable",
+  "gold_answer": null,
+  "evidence": [],
+  "hits": [
+   {
+    "chunk_id": "B:1810.12091:1",
+    "score": 0.9301
+   },
+   {
+    "chunk_id": "B:1810.12091:11",
+    "score": 0.7934
+   },
+   {
+    "chunk_id": "B:1908.04042:6",
+    "score": 0.705
+   },
+   {
+    "chunk_id": "B:1908.04042:9",
+    "score": 0.3844
+   },
+   {
+    "chunk_id": "B:1810.12091:7",
+    "score": 0.31
+   }
+  ],
+  "top_score": 0.9301277995109558,
+  "hit5": false,
+  "mrr": null,
+  "refused": false,
+  "answer": "The paper selects the top 100,000 tags in all experiments where term selection is used [2].",
+  "validation": {
+   "citations": [
+    2
+   ],
+   "valid_citations": [
+    2
+   ],
+   "n_invalid": 0,
+   "has_citations": true
+  }
+ },
+ {
+  "question_id": "2e37e681942e28b5b05639baaff4cd5129adb5fb",
+  "paper_id": "1611.08661",
+  "question": "How large are the textual descriptions of entities?",
+  "qtype": "unanswerable",
+  "gold_answer": null,
+  "evidence": [],
+  "hits": [
+   {
+    "chunk_id": "B:1611.08661:1",
+    "score": 0.9921
+   },
+   {
+    "chunk_id": "B:1611.08661:0",
+    "score": 0.9625
+   },
+   {
+    "chunk_id": "B:2003.13032:3",
+    "score": 0.8765
+   },
+   {
+    "chunk_id": "B:1912.10011:3",
+    "score": 0.827
+   },
+   {
+    "chunk_id": "B:1611.08661:11",
+    "score": 0.7663
+   }
+  ],
+  "top_score": 0.9920567870140076,
+  "hit5": false,
+  "mrr": null,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "b2ecfd5480a2a4be98730e2d646dfb84daedab17",
+  "paper_id": "1810.05241",
+  "question": "What does the TextWorld ACG dataset contain?",
+  "qtype": "unanswerable",
+  "gold_answer": null,
+  "evidence": [],
+  "hits": [
+   {
+    "chunk_id": "B:1810.05241:14",
+    "score": 0.9882
+   },
+   {
+    "chunk_id": "B:2001.08868:13",
+    "score": 0.1275
+   },
+   {
+    "chunk_id": "B:1909.08970:0",
+    "score": 0.0051
+   },
+   {
+    "chunk_id": "B:1803.05223:0",
+    "score": 0.004
+   },
+   {
+    "chunk_id": "B:1909.08970:7",
+    "score": 0.0039
+   }
+  ],
+  "top_score": 0.9881705045700073,
+  "hit5": false,
+  "mrr": null,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "0767ca8ff1424f7a811222ca108a33b6411aaa8a",
+  "paper_id": "1706.01678",
+  "question": "What is the performance of their method?",
+  "qtype": "unanswerable",
+  "gold_answer": null,
+  "evidence": [],
+  "hits": [
+   {
+    "chunk_id": "B:2002.01664:7",
+    "score": 0.9818
+   },
+   {
+    "chunk_id": "B:2002.11910:4",
+    "score": 0.9222
+   },
+   {
+    "chunk_id": "B:1801.07887:1",
+    "score": 0.9102
+   },
+   {
+    "chunk_id": "B:2001.07820:8",
+    "score": 0.9058
+   },
+   {
+    "chunk_id": "B:2001.07786:4",
+    "score": 0.8296
+   }
+  ],
+  "top_score": 0.9818117022514343,
+  "hit5": false,
+  "mrr": null,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "6a633811019e9323dc8549ad540550d27aa6d972",
+  "paper_id": "1603.01987",
+  "question": "Is it valid to presume a bad medical wikipedia article should not contain much domain-specific jargon?",
+  "qtype": "unanswerable",
+  "gold_answer": null,
+  "evidence": [],
+  "hits": [
+   {
+    "chunk_id": "B:1603.01987:1",
+    "score": 0.9817
+   },
+   {
+    "chunk_id": "B:1603.01987:13",
+    "score": 0.853
+   },
+   {
+    "chunk_id": "B:1603.01987:12",
+    "score": 0.8402
+   },
+   {
+    "chunk_id": "B:1603.01987:0",
+    "score": 0.7286
+   },
+   {
+    "chunk_id": "B:1603.01987:2",
+    "score": 0.6933
+   }
+  ],
+  "top_score": 0.9816646575927734,
+  "hit5": false,
+  "mrr": null,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "8748e8f64af57560d124c7b518b853bf2711c13e",
+  "paper_id": "1910.12574",
+  "question": "Do they report results only on English data?",
+  "qtype": "unanswerable",
+  "gold_answer": null,
+  "evidence": [],
+  "hits": [
+   {
+    "chunk_id": "B:1603.01514:7",
+    "score": 0.988
+   },
+   {
+    "chunk_id": "B:2003.04866:33",
+    "score": 0.9252
+   },
+   {
+    "chunk_id": "B:1606.02891:5",
+    "score": 0.9205
+   },
+   {
+    "chunk_id": "B:2004.04721:5",
+    "score": 0.9185
+   },
+   {
+    "chunk_id": "B:1804.07789:10",
+    "score": 0.8795
+   }
+  ],
+  "top_score": 0.9879530668258667,
+  "hit5": false,
+  "mrr": null,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "4d7ff4e5d06902de85b0e9a364dc455196d06a7d",
+  "paper_id": "1706.09673",
+  "question": "Which representation learning architecture do they adopt?",
+  "qtype": "unanswerable",
+  "gold_answer": null,
+  "evidence": [],
+  "hits": [
+   {
+    "chunk_id": "B:1611.08661:1",
+    "score": 0.9262
+   },
+   {
+    "chunk_id": "B:1611.08661:11",
+    "score": 0.8932
+   },
+   {
+    "chunk_id": "B:1811.00147:1",
+    "score": 0.8922
+   },
+   {
+    "chunk_id": "B:1812.10479:15",
+    "score": 0.8881
+   },
+   {
+    "chunk_id": "B:1611.08661:10",
+    "score": 0.8538
+   }
+  ],
+  "top_score": 0.9262452721595764,
+  "hit5": false,
+  "mrr": null,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "b80a3fbeb49a8968e149955bdcf199556478eeff",
+  "paper_id": "1910.07601",
+  "question": "How does this approach compares to the state-of-the-art results on these tasks?",
+  "qtype": "unanswerable",
+  "gold_answer": null,
+  "evidence": [],
+  "hits": [
+   {
+    "chunk_id": "B:1809.02286:12",
+    "score": 0.9867
+   },
+   {
+    "chunk_id": "B:1909.03405:11",
+    "score": 0.941
+   },
+   {
+    "chunk_id": "B:1806.04330:0",
+    "score": 0.922
+   },
+   {
+    "chunk_id": "B:1909.03405:7",
+    "score": 0.9219
+   },
+   {
+    "chunk_id": "B:1909.03405:10",
+    "score": 0.907
+   }
+  ],
+  "top_score": 0.9867104887962341,
+  "hit5": false,
+  "mrr": null,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "1eef2d2c296fdd10b08bf7b4ff7792cccf177d3b",
+  "paper_id": "1903.07406",
+  "question": "What features are used?",
+  "qtype": "unanswerable",
+  "gold_answer": null,
+  "evidence": [],
+  "hits": [
+   {
+    "chunk_id": "B:1611.02988:5",
+    "score": 0.9867
+   },
+   {
+    "chunk_id": "B:1806.05513:6",
+    "score": 0.9664
+   },
+   {
+    "chunk_id": "B:1910.12574:2",
+    "score": 0.9345
+   },
+   {
+    "chunk_id": "B:1701.08229:1",
+    "score": 0.8463
+   },
+   {
+    "chunk_id": "B:1911.03059:3",
+    "score": 0.7858
+   }
+  ],
+  "top_score": 0.986682116985321,
+  "hit5": false,
+  "mrr": null,
+  "refused": false,
+  "answer": "The context passages describe several different feature sets used across different studies, so the answer depends on which study is meant. In one study, basic text-based features include a tf-idf bag-of-words feature, word (2-3) and character (2-5) ngrams, and features related to the presence of negation words and the usage of punctuation [1]. Another study uses character-level and word-level features, including letter n-grams (specifically trigrams occurring more than ten times in the corpus), a three-word window to incorporate contextual information, common words, and hashtag words decomposed via camel case [2]. A third study notes that features such as bag of words, word-level and character-level n-grams have proven to be the most predictive features [3]. Another dataset was encoded with 7 feature groups: lexical features (unigrams), syntactic features (parts of speech), emotion features (emoticons), demographic features (age and gender), sentiment features (polarity and subjectivity terms with strengths), personality traits (e.g., neuroticism), and LIWC features [4]. Yet another system uses question word and phrases, parts of speech tags, parse features, named entities, semantically related words, TF-IDF, word-level bi-grams, and stop-word handling setups [5].",
+  "validation": {
+   "citations": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "valid_citations": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "n_invalid": 0,
+   "has_citations": true
+  }
+ },
+ {
+  "question_id": "bfbd6040cb95b179118557352e8e3899ef25c525",
+  "paper_id": "1912.01852",
+  "question": "Are there elements, other than pitch, that can potentially result in out of key converted singing?",
+  "qtype": "unanswerable",
+  "gold_answer": null,
+  "evidence": [],
+  "hits": [
+   {
+    "chunk_id": "B:1912.01852:0",
+    "score": 0.9739
+   },
+   {
+    "chunk_id": "B:1912.01852:2",
+    "score": 0.9522
+   },
+   {
+    "chunk_id": "B:1912.01852:3",
+    "score": 0.9384
+   },
+   {
+    "chunk_id": "B:1912.01852:6",
+    "score": 0.9314
+   },
+   {
+    "chunk_id": "B:1912.01852:5",
+    "score": 0.8692
+   }
+  ],
+  "top_score": 0.9739310145378113,
+  "hit5": false,
+  "mrr": null,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "8bb0011ad1d63996d5650770f3be18abdd9f7fc6",
+  "paper_id": "1809.03449",
+  "question": "Do they report results only on English datasets?",
+  "qtype": "unanswerable",
+  "gold_answer": null,
+  "evidence": [],
+  "hits": [
+   {
+    "chunk_id": "B:1804.07789:10",
+    "score": 0.981
+   },
+   {
+    "chunk_id": "B:1806.04511:1",
+    "score": 0.9598
+   },
+   {
+    "chunk_id": "B:2003.04866:33",
+    "score": 0.9537
+   },
+   {
+    "chunk_id": "B:2003.04866:1",
+    "score": 0.9519
+   },
+   {
+    "chunk_id": "B:2004.04721:6",
+    "score": 0.9496
+   }
+  ],
+  "top_score": 0.9810236692428589,
+  "hit5": false,
+  "mrr": null,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "8e12b5c459fa963b3e549deadb864c244879fe82",
+  "paper_id": "1910.06592",
+  "question": "How many layers does their model have?",
+  "qtype": "unanswerable",
+  "gold_answer": null,
+  "evidence": [],
+  "hits": [
+   {
+    "chunk_id": "B:1809.09194:1",
+    "score": 0.997
+   },
+   {
+    "chunk_id": "B:1810.12196:8",
+    "score": 0.9662
+   },
+   {
+    "chunk_id": "B:1703.07090:12",
+    "score": 0.9621
+   },
+   {
+    "chunk_id": "B:1810.12085:4",
+    "score": 0.9564
+   },
+   {
+    "chunk_id": "B:1909.02304:10",
+    "score": 0.9479
+   }
+  ],
+  "top_score": 0.9970434308052063,
+  "hit5": false,
+  "mrr": null,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "627b8d7b5b985394428c974aca5ba0c1bbbba377",
+  "paper_id": "1909.01383",
+  "question": "how many humans evaluated the results?",
+  "qtype": "unanswerable",
+  "gold_answer": null,
+  "evidence": [],
+  "hits": [
+   {
+    "chunk_id": "B:1903.11283:8",
+    "score": 0.9722
+   },
+   {
+    "chunk_id": "B:1909.04002:10",
+    "score": 0.9238
+   },
+   {
+    "chunk_id": "B:1910.08293:12",
+    "score": 0.8926
+   },
+   {
+    "chunk_id": "B:1909.02304:12",
+    "score": 0.8613
+   },
+   {
+    "chunk_id": "B:1906.01081:3",
+    "score": 0.8214
+   }
+  ],
+  "top_score": 0.9721674919128418,
+  "hit5": false,
+  "mrr": null,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "3fff37b9f68697d080dbd9d9008a63907137644e",
+  "paper_id": "2001.03131",
+  "question": "How do their results compare to state-of-the-art?",
+  "qtype": "unanswerable",
+  "gold_answer": null,
+  "evidence": [],
+  "hits": [
+   {
+    "chunk_id": "B:1809.03449:10",
+    "score": 0.9468
+   },
+   {
+    "chunk_id": "B:1610.08815:14",
+    "score": 0.9107
+   },
+   {
+    "chunk_id": "B:1901.01010:9",
+    "score": 0.8023
+   },
+   {
+    "chunk_id": "B:1908.09246:11",
+    "score": 0.717
+   },
+   {
+    "chunk_id": "B:1908.08345:14",
+    "score": 0.591
+   }
+  ],
+  "top_score": 0.9467862248420715,
+  "hit5": false,
+  "mrr": null,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "e438445cf823893c841b2bc26cdce32ccc3f5cbe",
+  "paper_id": "1901.01010",
+  "question": "Which fonts are the best indicators of high quality?",
+  "qtype": "unanswerable",
+  "gold_answer": null,
+  "evidence": [],
+  "hits": [
+   {
+    "chunk_id": "B:1901.01010:11",
+    "score": 0.2078
+   },
+   {
+    "chunk_id": "B:1901.01010:1",
+    "score": 0.0595
+   },
+   {
+    "chunk_id": "B:1901.01010:0",
+    "score": 0.0182
+   },
+   {
+    "chunk_id": "B:1901.01010:12",
+    "score": 0.0157
+   },
+   {
+    "chunk_id": "B:1909.09067:6",
+    "score": 0.0135
+   }
+  ],
+  "top_score": 0.20778273046016693,
+  "hit5": false,
+  "mrr": null,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "007b13f05d234d37966d1aa7d85b5fd78564ff45",
+  "paper_id": "1804.11346",
+  "question": "Do the errors of the model reflect linguistic similarity between different L1s?",
+  "qtype": "unanswerable",
+  "gold_answer": null,
+  "evidence": [],
+  "hits": [
+   {
+    "chunk_id": "B:1903.11283:5",
+    "score": 0.9981
+   },
+   {
+    "chunk_id": "B:1903.11283:7",
+    "score": 0.9972
+   },
+   {
+    "chunk_id": "B:1903.11283:10",
+    "score": 0.9903
+   },
+   {
+    "chunk_id": "B:1903.11283:2",
+    "score": 0.9865
+   },
+   {
+    "chunk_id": "B:1903.11283:3",
+    "score": 0.9857
+   }
+  ],
+  "top_score": 0.9981378316879272,
+  "hit5": false,
+  "mrr": null,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "0fc2b5bc2ead08a6fe0280fb3a47477c6df1587c",
+  "paper_id": "1603.01514",
+  "question": "Do they improve on state-of-the-art semantic role induction?",
+  "qtype": "unanswerable",
+  "gold_answer": null,
+  "evidence": [],
+  "hits": [
+   {
+    "chunk_id": "B:1603.01514:0",
+    "score": 0.9772
+   },
+   {
+    "chunk_id": "B:1603.01514:8",
+    "score": 0.9633
+   },
+   {
+    "chunk_id": "B:1603.01514:1",
+    "score": 0.9403
+   },
+   {
+    "chunk_id": "B:1809.02286:13",
+    "score": 0.938
+   },
+   {
+    "chunk_id": "B:1603.01514:11",
+    "score": 0.9352
+   }
+  ],
+  "top_score": 0.977178692817688,
+  "hit5": false,
+  "mrr": null,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "22732cb9476e521452bf0538f3fdb94cf3867651",
+  "paper_id": "1701.05574",
+  "question": "What kind of stylistic features are obtained?",
+  "qtype": "unanswerable",
+  "gold_answer": null,
+  "evidence": [],
+  "hits": [
+   {
+    "chunk_id": "B:1910.06592:2",
+    "score": 0.9417
+   },
+   {
+    "chunk_id": "B:1903.11283:9",
+    "score": 0.3573
+   },
+   {
+    "chunk_id": "B:1910.06592:5",
+    "score": 0.18
+   },
+   {
+    "chunk_id": "B:1910.03634:1",
+    "score": 0.0855
+   },
+   {
+    "chunk_id": "B:1910.08293:3",
+    "score": 0.0563
+   }
+  ],
+  "top_score": 0.9416729211807251,
+  "hit5": false,
+  "mrr": null,
+  "refused": false,
+  "answer": "The paper extracts canonical stylistic features such as the count of question marks, exclamation marks, consecutive characters and letters, links, hashtags, and users' mentions [1]. In addition, it extracts the uppercase ratio and the tweet length [1].",
+  "validation": {
+   "citations": [
+    1
+   ],
+   "valid_citations": [
+    1
+   ],
+   "n_invalid": 0,
+   "has_citations": true
+  }
+ },
+ {
+  "question_id": "fe1a74449847755cd7a46647cc9d384abfee789e:oob",
+  "paper_id": "1901.03253",
+  "question": "Where can I access the dataset?",
+  "qtype": "oob",
+  "gold_answer": null,
+  "evidence": [],
+  "hits": [
+   {
+    "chunk_id": "B:1901.01010:5",
+    "score": 0.9383
+   },
+   {
+    "chunk_id": "B:1810.12196:5",
+    "score": 0.8204
+   },
+   {
+    "chunk_id": "B:1811.05711:23",
+    "score": 0.7493
+   },
+   {
+    "chunk_id": "B:1911.07555:1",
+    "score": 0.6391
+   },
+   {
+    "chunk_id": "B:1801.06482:2",
+    "score": 0.6234
+   }
+  ],
+  "top_score": 0.9383275508880615,
+  "hit5": false,
+  "mrr": null,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "2895a3fc63f6f403445c11043460584e949fb16c:oob",
+  "paper_id": "1710.07695",
+  "question": "what do they mean by description length?",
+  "qtype": "oob",
+  "gold_answer": null,
+  "evidence": [],
+  "hits": [
+   {
+    "chunk_id": "B:1804.07789:10",
+    "score": 0.0894
+   },
+   {
+    "chunk_id": "B:1612.02482:6",
+    "score": 0.0616
+   },
+   {
+    "chunk_id": "B:1804.07789:0",
+    "score": 0.0587
+   },
+   {
+    "chunk_id": "B:1909.04002:6",
+    "score": 0.0483
+   },
+   {
+    "chunk_id": "B:1912.10011:4",
+    "score": 0.0386
+   }
+  ],
+  "top_score": 0.08939821273088455,
+  "hit5": false,
+  "mrr": null,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "37ac705166fa87dc74fe86575bf04bea56cc4930:oob",
+  "paper_id": "2004.02363",
+  "question": "what evaluation metrics were used?",
+  "qtype": "oob",
+  "gold_answer": null,
+  "evidence": [],
+  "hits": [
+   {
+    "chunk_id": "B:1910.08293:11",
+    "score": 0.997
+   },
+   {
+    "chunk_id": "B:1912.10011:8",
+    "score": 0.994
+   },
+   {
+    "chunk_id": "B:1708.06185:5",
+    "score": 0.9935
+   },
+   {
+    "chunk_id": "B:1910.08293:10",
+    "score": 0.9758
+   },
+   {
+    "chunk_id": "B:1908.01294:13",
+    "score": 0.9747
+   }
+  ],
+  "top_score": 0.9970316886901855,
+  "hit5": false,
+  "mrr": null,
+  "refused": false,
+  "answer": "The context describes several evaluation metrics: Hits@n/N, which is the accuracy of the correct ground truth response being within the top n ranked candidate responses out of N total candidates, measured as Hits@1/20, Hits@5/20, and Hits@10/20 [4]. Mean Rank is the average rank that a model assigns the ground truth response among the 20 total candidates [1][4]. Mean Reciprocal Rank (MRR) is the mean of the multiplicative inverses of the rank of each correct answer out of a sample of queries [1]. The F1-score equals 2 * (precision*recall)/(precision+recall), where for dialogue precision is the fraction of words in the chosen response contained in the ground truth response and recall is the fraction of words in the ground truth response contained in the chosen response [1]. BLEU generally indicates how close two pieces of text are in content and structure, with higher values indicating greater similarity, and is reported as the average scores of 1 to 4-grams [1]. BLEU is also described as computing the number of co-occurrences for ngrams (n ∈ {1, 2, 3, 4}) between the generated candidate and the ground truth [2]. Information extraction-oriented metrics include Relation Generation (RG), which measures the precision and absolute number of unique relations extracted from the generated text that also appear in the source [2]; Content Selection (CS), which measures the precision and recall of unique relations extracted from the generated text that are also extracted from the gold text [2]; and Content Ordering (CO), which measures the normalized Damerau-Levenshtein distance between the sequences of records extracted from the generated and gold texts [2]. For Thai sentence segmentation, three metrics are used: sentence boundary F1 score, non-sentence boundary F1 score, and space correct [5]. For English punctuation, evaluation is measured on each type of punctuation and overall F1 score, and a 2-class F1 score is calculated to measure model accuracy [5].",
+  "validation": {
+   "citations": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "valid_citations": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "n_invalid": 0,
+   "has_citations": true
+  }
+ },
+ {
+  "question_id": "2e70d25f14357ad74c085a9454a2ce33bb988a6f:oob",
+  "paper_id": "1912.06905",
+  "question": "What are their results on this task?",
+  "qtype": "oob",
+  "gold_answer": null,
+  "evidence": [],
+  "hits": [
+   {
+    "chunk_id": "B:2003.11563:10",
+    "score": 0.9887
+   },
+   {
+    "chunk_id": "B:1910.09982:7",
+    "score": 0.9562
+   },
+   {
+    "chunk_id": "B:2001.07786:5",
+    "score": 0.9253
+   },
+   {
+    "chunk_id": "B:1909.03405:12",
+    "score": 0.8339
+   },
+   {
+    "chunk_id": "B:1909.03405:11",
+    "score": 0.7078
+   }
+  ],
+  "top_score": 0.9887442588806152,
+  "hit5": false,
+  "mrr": null,
+  "refused": true,
+  "answer": "The provided knowledge base does not contain sufficient information to answer this question.",
+  "validation": {
+   "citations": [],
+   "valid_citations": [],
+   "n_invalid": 0,
+   "has_citations": false
+  }
+ },
+ {
+  "question_id": "99f898eb91538cb82bc9a00892d54ae2a740961e:oob",
+  "paper_id": "1710.10380",
+  "question": "Which downstream tasks are considered?",
+  "qtype": "oob",
+  "gold_answer": null,
+  "evidence": [],
+  "hits": [
+   {
+    "chunk_id": "B:1908.11047:4",
+    "score": 0.9785
+   },
+   {
+    "chunk_id": "B:1908.01294:19",
+    "score": 0.9729
+   },
+   {
+    "chunk_id": "B:1909.11687:7",
+    "score": 0.9695
+   },
+   {
+    "chunk_id": "B:1908.11047:3",
+    "score": 0.9599
+   },
+   {
+    "chunk_id": "B:1908.11047:5",
+    "score": 0.9561
+   }
+  ],
+  "top_score": 0.9784829616546631,
+  "hit5": false,
+  "mrr": null,
+  "refused": false,
+  "answer": "The paper employs four downstream tasks to test the impact of shallow syntax: coarse and fine-grained named entity recognition (NER), constituency parsing, and sentence-level sentiment classification [1]. For NER, the English portion of the CoNLL 2003 dataset is used [1]. Fine-grained NER uses OntoNotes 5.0 with 18 fine-grained labels [1]. Phrase-structure parsing uses the standard Penn Treebank splits with a span-based model [1]. Sentiment analysis considers fine-grained (5-class) classification on the Stanford Sentiment Treebank [5].",
+  "validation": {
+   "citations": [
+    1,
+    5
+   ],
+   "valid_citations": [
+    1,
+    5
+   ],
+   "n_invalid": 0,
+   "has_citations": true
+  }
+ }
+]

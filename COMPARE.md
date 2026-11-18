@@ -31,8 +31,8 @@ with different trade-offs; this note compares them honestly.
 
 | Metric | PaperScope | This repo | Comparable? |
 |---|---:|---:|---|
-| Hit@5 (paper-scoped) | 0.70 / 0.70 | 0.725 / 0.725 → **0.875** with rerank | **Only roughly.** PaperScope counts a hit when ≥50% of a gold *paragraph* is covered by the **union** of the top-5 chunks; we require the full gold *evidence string* to sit inside **one** chunk. Their definition tolerates evidence split across chunks; ours does not. |
-| Evidence recall | 0.675 / 0.650 | 0.634 / 0.665 (0.789 with rerank) | Roughly — both are coverage-style, ours over evidence strings, theirs over paragraphs. |
+| Hit@5 (paper-scoped) | 0.70 / 0.70 | 0.725 (A) / 0.725 (B) → **0.875** (A + rerank), 0.675 (B + rerank) | **Only roughly.** PaperScope counts a hit when ≥50% of a gold *paragraph* is covered by the **union** of the top-5 chunks; we require the full gold *evidence string* to sit inside **one** chunk. Their definition tolerates evidence split across chunks; ours does not. |
+| Evidence recall | 0.675 / 0.650 | 0.634 / 0.665 (0.789 best with rerank) | Roughly — both are coverage-style, ours over evidence strings, theirs over paragraphs. |
 | Strict answer accuracy | 0.30 / 0.40 | 0.228 / 0.228 token-F1 (0.284 with rerank) | **No.** Strict span match (binary, exact) vs token-F1 (graded, penalises long answers). |
 | Manual semantic review | **0.75 / 0.80** (19–20 / 24 incl. refusals) | not performed | — |
 | Refusal | 4/4 | 0.84 accuracy on 25 negatives (0.92 with rerank) | **No.** 4 hand-made clearly-unrelated questions vs 20 official unanswerable + 5 out-of-KB. |
@@ -58,11 +58,12 @@ frozen 208-case outcome file, and a manual review that keeps automated metrics i
 perspective.
 
 **This repo** — system depth: a 14× larger knowledge base, a verified cross-encoder
-reranking stage (+15 Hit@5 points, rank-misses 9 → 3, hallucination 16% → 8%), an
-explicit paper-scoped vs global retrieval ablation (0.725 vs 0.25–0.30), a 65-question
-evaluation with 20 genuinely unanswerable and 5 out-of-KB questions, the official
-QASPER token-F1, and a miss taxonomy that explains *why* each chunker fails
-(rank-miss vs split-miss).
+reranking stage (+0.150 Hit@5 on structured chunks, rank-misses 9 → 3, hallucination
+16% → 8%; neutral to negative on 512-token windows, which is itself a reportable
+result), an explicit paper-scoped vs global retrieval ablation (0.725 vs 0.25–0.30),
+a 65-question evaluation with 20 genuinely unanswerable and 5 out-of-KB questions,
+the official QASPER token-F1, and a miss taxonomy that explains *why* each chunker
+fails (rank-miss vs split-miss).
 
 ## What a merged report should take from each
 

@@ -85,28 +85,65 @@ Per-type retrieval (Hit@5):
 | Abstractive (n=12) | **0.917** | 0.667 | 0.417 | 0.333 |
 | Boolean (n=8) | 0.125 | 0.375 | 0.000 | 0.000 |
 
-## Reranking — Qwen3-Reranker-0.6B, paper-scoped, strategy A
+## Reranking — Qwen3-Reranker-0.6B, all four configurations
 
-Fetch top-24 by embedding, re-order with the cross-encoder, keep top-5.
+Fetch the top-24 candidates by embedding, re-order with the cross-encoder, keep top-5.
 
-| | Baseline | + Reranker | Δ |
+| | A / paper | B / paper | A / global | B / global |
+|---|---:|---:|---:|---:|
+| Hit@5 — baseline → rerank | 0.725 → **0.875** | 0.725 → 0.675 | 0.250 → **0.325** | 0.300 → 0.300 |
+| Δ Hit@5 | **+0.150** | −0.050 | **+0.075** | 0.000 |
+| Hit@3 | 0.725 | 0.625 | 0.300 | 0.250 |
+| Hit@1 | 0.300 | 0.225 | 0.125 | 0.075 |
+| EvidenceRecall@5 | 0.789 | 0.608 | 0.296 | 0.271 |
+| MRR — baseline → rerank | 0.436 → **0.512** | 0.337 → **0.403** | 0.160 → **0.209** | 0.102 → **0.163** |
+| Δ MRR | +0.076 | +0.066 | +0.049 | +0.061 |
+| Answer F1 | 0.284 (21) | 0.234 (23) | 0.233 (14) | 0.234 (13) |
+| Abstention accuracy | 0.92 | 0.84 | 0.84 | 0.76 |
+| Hallucination rate | **0.08** | 0.16 | 0.16 | 0.24 |
+| Refusal precision | 0.590 | 0.583 | 0.457 | 0.432 |
+| Citation rate / invalid | 1.00 / 0 | 1.00 / 0 | 1.00 / 0 | 1.00 / 0 |
+| Misses (was) | **5** (11) | 13 (11) | 27 (30) | 28 (28) |
+| τ | 0.265 | 0.066 | 0.927 | 0.859 |
+
+### Reranking is not free: it helps fine-grained chunks and hurts when evidence is split
+
+Three patterns hold across the grid:
+
+1. **Ordering always improves.** MRR rises in all four configurations (+0.049 to
+   +0.076). When the reranker keeps a hit, it puts it higher.
+2. **Hit@5 only improves where chunks are small and self-contained.** Structured
+   chunks (A) gain +0.150 paper-scoped and +0.075 globally. Sliding windows (B) lose
+   0.050 paper-scoped and stay flat globally.
+3. **Confidence calibration can invert.** Abstention improves only where retrieval
+   improved (A/paper 0.84 → 0.92, hallucination 16% → 8%); for B/global the
+   reranker's confidently-high scores on irrelevant windows *raise* false answers
+   (hallucination 16% → 24%).
+
+The mechanism is visible in the miss taxonomy: B/paper keeps **7 split-misses
+before and after reranking** — those are chunks whose evidence was cut by the
+window boundary, and no re-ordering can restore text that is not there. Meanwhile
+the cross-encoder prefers a window that is *entirely* on-topic over a 512-token
+window that contains the evidence sentence alongside three unrelated paragraphs, so
+it demotes some evidence-bearing windows: B/paper's misses rise 11 → 13 even as its
+MRR improves.
+
+**Practical rule from this grid:** rerank when chunks are semantically focused
+(structured / small); with long fixed windows, fix the chunker first (or add
+sentence-level splitting), then rerank.
+
+### Global retrieval is a candidate-generation problem, not a ranking problem
+
+Global paper-hit is 0.575 (A) / 0.500 (B) at depth 5 and 0.600 / 0.550 at depth 24
+with reranking. Roughly 40–45% of questions never see their own paper in the
+candidate list, so no re-ordering stage can help them — the remaining global misses
+are dominated by paper-misses (16 of 27 for A/global). Raising the rerank depth to
+100 is the direct test of this explanation (see below).
+
+| A / global, rerank depth | Hit@5 | paper-hit | Misses |
 |---|---:|---:|---:|
-| **Hit@5** | 0.725 | **0.875** | **+0.150** |
-| Hit@3 | 0.575 | **0.725** | +0.150 |
-| Hit@1 | 0.250 | **0.300** | +0.050 |
-| EvidenceRecall@5 | 0.634 | **0.789** | +0.155 |
-| MRR | 0.436 | **0.512** | +0.076 |
-| Answer F1 (n) | 0.228 (12) | **0.284 (21)** | +0.056 |
-| Extractive Hit@5 / F1 | 0.850 / 0.238 | **0.950 / 0.298** | +0.100 / +0.060 |
-| Abstractive Hit@5 / F1 | 0.917 / 0.203 | 0.833 / **0.243** | −0.084 / +0.040 |
-| Abstention accuracy | 0.84 | **0.92** | +0.080 |
-| Hallucination rate | 0.16 | **0.08** | −0.080 |
-| Refusal precision | 0.583 | 0.590 | +0.007 |
-| Citation rate / invalid | 1.00 / 0 | 1.00 / 0 | — |
-| τ | 0.554 | 0.265 | — |
-
-Rerank scores are bimodal (min 0.012, max 1.000 across answerable questions), so τ
-must be recalibrated per configuration — this is why the rerank run uses 0.265.
+| 24 | 0.325 | 0.600 | 27 |
+| 100 | see `results/results_A_global_rr100.json` | — | — |
 
 ## Miss taxonomy — where the 40 answerable questions fail
 
@@ -125,24 +162,32 @@ must be recalibrated per configuration — this is why the rerank run uses 0.265
 | A / global | 30 | **17** | 10 | 1 | 2 |
 | B / global | 28 | **20** | 4 | 2 | 2 |
 | A / paper + rerank | **5** | 0 | **3** | 0 | 2 |
+| B / paper + rerank | 13 | 0 | 4 | **7** | 2 |
+| A / global + rerank | 27 | **16** | 8 | 1 | 2 |
+| B / global + rerank | 28 | **18** | 7 | 1 | 2 |
 
 This is the clearest finding in the study: **the two chunkers fail in different
 ways.** Structured chunks fail by *ranking* (the evidence is inside the paper's
 retrieved block but ranked 6–20); sliding windows fail by *splitting* (the window
 boundary cuts the annotated sentence in half). Reranking fixes exactly the
-ranking failure — rank-misses 9 → 3, Hit@5 0.725 → 0.875 — and cannot fix
-splitting, which is structural.
+ranking failure — A/paper rank-misses 9 → 3, Hit@5 0.725 → 0.875 — and leaves the
+split-misses at 7 for B, because that damage is structural.
 
 ## Retrieval scope is the single largest lever
 
 Paper-scoped retrieval (the "user is reading this paper" setting) lifts Hit@5 from
-**0.25–0.30 to 0.725** on the same corpus and questions. Global retrieval over
-9,609 chunks misses the correct paper in 42–50% of questions; no amount of chunk
-tuning repairs that. Both settings are reported because the gap is the interesting
-result, not a defect to hide.
+**0.25–0.30 to 0.725** on the same corpus and questions, before any reranking.
+Global retrieval over 9,609 chunks keeps the correct paper out of the top-24
+candidates for 40–45% of questions; no re-ordering stage repairs that. Both settings
+are reported because the gap is the interesting result, not a defect to hide.
 
 ## Limitations
 
+* **Reranking is not a universal upgrade.** It lifts Hit@5 by +0.150 paper-scoped
+  and +0.075 globally on structured chunks, but *lowers* it by 0.050 on 512-token
+  sliding windows and raises B/global's hallucination rate from 16% to 24%. The
+  mechanism (split evidence + holistic relevance preference) is analysed above;
+  it should be reported as a conditional finding, not as "rerank works".
 * **Boolean questions are mostly refused.** The per-config τ (10th percentile of
   answerable scores) lands above the short, low-lexical-overlap boolean queries:
   8 boolean questions yield only 1–3 answers, with 0–1 correct. Boolean handling
@@ -160,3 +205,5 @@ result, not a defect to hide.
   future work pending a trustworthy GGUF.
 * **65 questions is a small sample.** Per-type cells (especially boolean, n = 8)
   carry wide error bars; differences below ~0.08 Hit@5 should be treated as ties.
+  Under that rule, A/paper's +0.150 and A/global's +0.075 sit at or just under the
+  threshold — the B/paper drop (−0.050) should be called a tie, not a loss.

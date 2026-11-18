@@ -1,4 +1,4 @@
-# CS548 Project — RAG KB-QA with Verifiable Citations
+# CS5481 Project — RAG KB-QA with Verifiable Citations
 
 Knowledge-base question answering over the **QASPER** dev corpus (281 NLP papers,
 1,005 questions) in the Retrieval-Augmented Generation pattern: two chunking
