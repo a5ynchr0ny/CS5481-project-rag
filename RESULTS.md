@@ -4,6 +4,12 @@ Frozen from the 65-question stratified evaluation (`data/eval_set.json`,
 seed = 42). Everything below is reproducible with the commands in
 [README.md](README.md); per-question records are in `results/`.
 
+> **Scale note:** the headline numbers in this file come from the 65-question
+> subset and two of their conclusions were corrected at scale — see
+> [bench/BENCH.md](bench/BENCH.md) for the same configurations evaluated on
+> **all 823 answerable dev questions** with confidence intervals and paired
+> significance tests. Use that table for any claim that needs to survive review.
+
 > `results/summary.json` holds the **last** `evaluate.py` run (the rerank
 > configuration). The four baseline configurations are stored per-question in
 > `results/results_{A,B}_{paper,global}.json`; their aggregates are the main table
